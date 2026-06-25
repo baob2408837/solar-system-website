@@ -4,31 +4,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="giohang.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="page">
 <header class="header">  
-  <img class="header__img header__img--logo" src="#" alt="logo">
+  <div class="nav-and-logo">
+    <img class="nav-and-logo__logo" src="#" alt="logo">
 
-  <div class="nav">
     <nav class="nav-bar">
-      <link class="nav-bar__link" rel="stylesheet" href="#">Trang chủ</link>
-      <link class="nav-bar__link" rel="stylesheet" href="#">Hành tinh Đất đá</link>
-      <link class="nav-bar__link" rel="stylesheet" href="#">Hành tinh Khí khổng lồ</link>
-      <link class="nav-bar__link" rel="stylesheet" href="#">Space Store</link>
-      <link class="nav-bar__link" rel="stylesheet" href="#">Giỏ hàng</link>
+      <ul class="nav-bar__nav">
+        <li><a class="nav-bar__link" href="#">Trang chủ</a></li>
+        <li><a class="nav-bar__link" href="#">Hành tinh Đất đá</a></li>
+        <li><a class="nav-bar__link" href="#">Hành tinh Khí khổng lồ</a></li>
+        <li><a class="nav-bar__link" href="#">Space Store</a></li>
+        <li><a class="nav-bar__link nav-bar__link--active" href="#">Giỏ hàng</a></li>
+      </ul>
     </nav>
   </div>
 
     <form action="search" class="search-form">
-      <input type="text" name="search" value="" placeholder="Tìm kiếm hành tinh, sản phẩm,...">
-      <input type="submit" value="search">
+      <input class="search-form__input" type="text" name="search" value="" placeholder="    Tìm kiếm hành tinh, sản phẩm,...">
+      <button class="search-form__submit" type="submit"><i class="fas fa-search"></i></button>
     </form>
 </header>
 
 <main>
+  <section class="cart-section">
+    <h2>Giỏ hàng của bạn</h2>
+    <div class="cart-section__container">
+      <article class="cart-item">
+        <img class="cart-item__img" src="#" alt="Tên sản phẩm">
+        <h3 class="cart-item__name">Tên sản phẩm</h3>
+        <p class="cart-item__price">Giá sản phẩm</p>
+        <div class="cart-item__quantity">
+          <button type="button">-</button>
+          <span>Số lượng: 1</span>
+          <button type="button">+</button>
+        </div>
+        <button class="cart-item__delete" type="button">Xoá</button>
+      </article>
+    </div>
 
-
-
+    <div class="cart-submit">
+      <a class="cart-submit__return-to-store" href="#">Tiếp tục mua sắm</a>
+      <button class="cart-submit__submit" type="submit">Đặt hàng</button>
+      <button class="cart-submit__return-to-top" type="button">Quay lại đầu trang</button>
+    </div>
+  </section>
 </main>
+<footer class="footer">
+  <div class="footer__main">
+    <div class="footer-description">
+      <div class="footer__description-block">
+        <img class="footer__logo" src="#" alt="logo">
+        <p class="footer__text">Khám phá vũ trụ trong tay bạn</p>
+        <br>
+        <p class="footer__text">Cung cấp thiên thạch, mô hình hành tinh
+          và các sản phẩm không gian chất lượng.
+        </p>
+      </div>
+      <div class="footer__socials">
+        <a class="footer__facebook-link" href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a class="footer__instagram-link" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a class="footer__twitter-link" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a class="footer__youtube-link" href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer__categories">
+      <h3 class="footer__categories-title">DANH MỤC</h3>
+        <ul class="footer__categories-list">
+          <li><a class="footer__category-link" href="#">Hành tinh Đất đá</a></li>
+          <li><a class="footer__category-link" href="#">Hành tinh Khí khổng lồ</a></li>
+          <li><a class="footer__category-link" href="#">Space Store</a></li>
+        </ul>
+    </div>
+  </div>
+
+  <div class="footer__copyright">
+    <p class="footer__copyright-text">&copy; 2026 Space Store. All rights reserved.</p>
+    <p class="footer__author">Thiết kế bởi nhóm 1</p>
+  </div>
+</footer>
 </body>
 </html>
