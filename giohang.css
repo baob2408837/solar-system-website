@@ -1,14 +1,71 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 .page {
-    display: grid;
-    grid-template-areas: "header" "main" "footer";
-    grid-template-rows: auto 1fr auto;
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: auto 1fr auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .header {
-    display: grid;
-    grid-template-rows: auto 1fr;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  width: 100%;
+  align-content: start;
+  min-width: 0;
+}
+
+.welcome {
+  background-color: rgb(9, 9, 70);
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0px 5%;
+  font-size: 14px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.welcome__text {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+  min-width: 0;
+  padding-right: 20px;
+}
+
+.welcome__link {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(15px, 6vw, 100px);
+  white-space: nowrap;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.welcome__config {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.welcome__sign-in,
+.welcome__register,
+.welcome__cart {
+  color: white;
+  text-decoration: none;
+}
+
+.welcome__sign-in:hover,
+.welcome__register:hover,
+.welcome__cart:hover {
+  color:aqua;
+  transition: color, 0.5s;
 }
