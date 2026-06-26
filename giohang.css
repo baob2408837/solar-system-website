@@ -150,6 +150,7 @@ footer {grid-area: footer; }
 
 .nav-bar__link--active {
   color: rgb(57, 82, 209);
+  transition: none;
 }
 
 .nav-bar__link--active::after {
@@ -280,6 +281,7 @@ sẽ để trống tạm ở đây*/
 }
 
 .footer__categories {
+  padding-top: 10px;
   grid-column: 2;
 }
 
