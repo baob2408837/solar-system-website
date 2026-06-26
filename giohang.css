@@ -61,11 +61,106 @@
 .welcome__cart {
   color: white;
   text-decoration: none;
+  transition: color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .welcome__sign-in:hover,
 .welcome__register:hover,
 .welcome__cart:hover {
-  color:aqua;
-  transition: color, 0.5s;
+  color:rgb(111, 176, 255);
+  cursor: pointer;
+}
+
+.welcome__sign-in:active,
+.welcome__register:active,
+.welcome__cart:active {
+  color: rgb(44, 44, 160);
+  transform: translateY(1px);
+  transition: none !important;
+}
+
+.nav-and-logo {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5%;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.nav-and-logo__logo {
+  height: 60px;
+  width: auto;
+
+}
+
+.nav-bar {
+  min-width: 0;
+  height: 100%;
+}
+
+.nav-bar__nav {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  gap: clamp(5px, 4vw, 60px);
+  white-space: nowrap;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.nav-bar__nav > li {
+  position: relative;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.nav-bar__link {
+  text-decoration: none;
+  color: rgb(9, 9, 70);
+  font-size: 18px;
+  transition: color 0.2s;
+}
+
+.nav-bar__link::after {
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left: -15px;
+  width: calc(100% + 30px);
+  height: 2px;
+  background-color: rgb(57, 82, 209);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-bar__link--active {
+  color: rgb(57, 82, 209);
+}
+
+.nav-bar__link--active::after {
+  transform: scaleX(1);
+}
+
+.nav-bar__link:hover {
+  color:rgb(57, 82, 209);
+}
+
+.nav-bar__link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-bar__link:active {
+  color: rgb(44, 44, 160);
+  transition: none;
+}
+
+.nav-bar__link:active::after {
+  background-color: rgb(44, 44, 160);
+  transition: none;
 }
