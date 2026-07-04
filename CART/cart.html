@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ hàng</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="cart.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+</head>
+<body class="page">
+  <main class="main">
+    <section class="cart">
+      <h1 class="cart__title">Giỏ hàng của bạn</h1>
+      <div class="cart__container">
+        <div class="cart__left">
+          <div class="cart__item-list">
+            <div class="cart__item">
+              <img class="item__img" src="#" alt="item's image">
+              <div class="item__info">
+                <h2 class="item__name">item's name</h2>
+                <h2 class="item__price">item's price</h2>
+                <div class="item__quantity">
+                  <p class="quantity__lable">Số lượng: </p>
+                  <button class="quantity__button" type="button">-</button>
+                  <p class="quantity__number">1</p>
+                  <button class="quantity__button" type="button">+</button>
+                </div>
+                <button class="item__delete" type="button">X</button>
+              </div>
+            </div>
+            <div class="cart__item">
+              <img class="item__img" src="#" alt="item's image">
+              <div class="item__info">
+                <h2 class="item__name">item's name</h2>
+                <h2 class="item__price">item's price</h2>
+                <div class="item__quantity">
+                  <p class="quantity__lable">Số lượng: </p>
+                  <button class="quantity__button" type="button">-</button>
+                  <p class="quantity__number">1</p>
+                  <button class="quantity__button" type="button">+</button>
+                </div>
+                <button class="item__delete" type="button">X</button>
+              </div>
+            </div>
+          </div>
+          <div class="cart-return">
+            <p class="cart-return__text">Bạn vẫn chưa mua sắm đủ? Hãy đến ngay với Space Store!</p>
+            <a class="cart-return__link">
+              <span class="return-link__text">Đến Space Store</span>
+              <i class="fa-solid fa-arrow-right icon-arrow"></i>
+            </a>
+          </div>
+        </div>
+        <div class="cart__right">
+          <h2 class="cart-right__title">Tóm tắt thanh toán</h2>
+          <p class="cart__summary-row">
+              <span class="cart-right__label">Tạm tính: </span>
+              <span>Giá tiền</span>
+          </p>
+          <p class="cart__summary-row">
+              <span class="cart-right__label">Phí vận chuyển:</span> 
+              <span>Miễn phí</span>
+          </p>
+          <div class="cart__coupon">
+            <span class="cart-right__label">Mã giảm giá:</span>
+            <form class="coupon__group" action="#" method="post">
+              <input class="coupon__text" type="text" placeholder="nhập mã...">
+              <button class="coupon__submit" type="submit">Áp dụng</button>
+            </form>
+          </div>
+          <hr class="cart-right__divider">
+          <p class="cart-right__total-price">
+            <span class="cart-right__main-label">Tổng tiền: </span>
+            <strong>Giá tiền</strong>
+          </p>
+          <button class="cart-right__submit" type="submit">Đặt hàng</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="description">
+        <p class="description__logo"><span class="logo__first-half">Space</span><span class="logo__second-half">Store</span></p>
+        <p class="description__text">Website giới thiệu kiến thức về các hành tinh khí khổng lồ trong Hệ Mặt Trời</p>
+      </div>
+      <div class="categories">
+        <p class="categories__title">Danh mục</p>
+        <ul class="categories__list">
+          <li><a class="categories__link" href="#">Trang chủ</a></li>
+          <li><a class="categories__link" href="#">Các hành tinh khí khổng lồ</a></li>
+          <li><a class="categories__link" href="#">Các hành tinh đất đá</a></li>
+          <li><a class="categories__link" href="#">Space Store</a></li>
+        </ul>
+      </div>
+      <div class="contact">
+        <p class="contact__title">Theo dõi</p>
+        <a class="contact__link" target="_blank" href="#"><i class="fab fa-facebook contact__link--icon"></i> Facebook</a>
+        <a class="contact__link" target="_blank" href="#"><i class="fab fa-instagram contact__link--icon"></i> Instagram</a>
+        <a class="contact__link" target="_blank" href="#"><i class="fab fa-github contact__link--icon"></i> Github</a>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      <p class="copyright__text">&copy; 2026 Space Store | Giant Planets Project</p>
+    </div>
+  </footer>
+
+<!--===================BACK TO TOP BUTTON==================-->
+
+  <button id="backtoTop" class="back-to-top show" aria-label="Quay lại đầu trang">&#11014;</button>
+
+</body>
+</html>
