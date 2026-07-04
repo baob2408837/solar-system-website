@@ -356,22 +356,18 @@ section {
 }
 
 .overview-grid{
-    width:90%;
-    max-width:1300px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:30px;
+    width: 90%;
+    max-width: 1400px;
+    margin: 70px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
 }
-
 .overview-card{
-    background:#101c2d;
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:22px;
-    padding:35px;
+    background:none;
+    border:none;
+    padding:0;
     transition:.35s;
-    position:relative;
-    overflow:hidden;
 }
 
 .card-number{
@@ -390,12 +386,10 @@ section {
 }
 
 .overview-card img{
-    width:130px;
-    height:130px;
-    object-fit:contain;
-    display:block;
-    margin:40px auto 30px;
-    transition:.4s;
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    border-radius:10px;
 }
 
 .overview-card:hover img{
@@ -403,23 +397,55 @@ section {
 }
 
 .overview-card h3{
+    margin-top:22px;
     color:white;
-    font-size:28px;
-    text-align:center;
-    margin-bottom:15px;
+    font-size:34px;
+    font-weight:700;
+    line-height:1.2;
 }
 
 .overview-card p{
-    color:#bcc6d4;
-    text-align:center;
-    line-height:1.8;
-    font-size:17px;
+    margin-top:18px;
+    color:#c7cedd;
+    font-size:20px;
+    line-height:1.7;
 }
 
 .overview-card:hover{
-    transform:translateY(-12px);
-    background:#182741;
-    box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+    transform:translateY(-8px);
+
+}
+
+.overview-card:hover img{
+
+    transform:scale(1.03);
+
+}
+
+.overview-card img{
+
+    transition:.4s;
+
+}
+@media(max-width:1200px){
+
+.overview-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.overview-grid{
+
+grid-template-columns:1fr;
+
+}
+
 }
 
 /* ===================================================
@@ -997,4 +1023,19 @@ section {
     .cta { padding: 45px 25px; }
     .cta h2 { font-size: 34px; }
     .footer { text-align: center; }
+}
+.planet-main{
+    width: 100%;
+    max-width: 480px;      /* chỉnh theo ý muốn */
+    animation: spinPlanet 40s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes spinPlanet{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
