@@ -26,7 +26,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inter', sans-serif;
   background-image: linear-gradient(160deg, #000000 0%, #051528 50%, #0a3764 100%);
   min-height: 100vh;
   background-attachment: fixed;
@@ -373,7 +373,7 @@ body::before {
   padding: 15px 0;
   font-size: var(--fs-medium);
   font-weight: bold;
-  background-image: linear-gradient(to right, #4fa8ff, #00e5ff);
+  background-image: linear-gradient( 140deg, #4fa8ff 0%, #00e5ff 100%);
   color: var(--text);
   border: solid 1px transparent;
   border-radius: 10px;
@@ -477,12 +477,12 @@ body::before {
 .quantity__button:hover {
   cursor: pointer;
   box-shadow: 0 0 12px rgba(79,168,255,.8);
-  opacity: .8;
+  opacity: 0.8;
   border: solid 1px var(--primary);
 }
 
 .quantity__button:active {
-  opacity: 1;
+  opacity: 0.6;
 }
 
 .item__delete {
@@ -569,13 +569,17 @@ body::before {
   color: var(--primary);
 }
 
+.description__text {
+  line-height: 28px;
+}
+
 .categories {
   grid-column: 2;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: start;
-  gap: 5px;
+  gap: 10px;
 }
 
 .categories__title {
@@ -589,7 +593,7 @@ body::before {
   padding-top: 5px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 10px;
 }
 
 .categories__link {
@@ -616,13 +620,13 @@ body::before {
   flex-direction: column;
   align-items: start;
   justify-content: start;
-  gap: 5px;
+  gap: 12px;
 }
 
 .contact__title {
   font-size: var(--fs-large);
   font-weight: bold;
-  padding: 0;
+  padding: 0 0 6px 0;
   margin: 0;
 }
 
@@ -635,7 +639,7 @@ body::before {
 
 .contact__link:hover {
   color: var(--text);
-  transform: translateX(10px);
+  transform: translateX(8px);
 }
 
 .footer__copyright {
