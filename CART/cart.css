@@ -26,8 +26,8 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
-  background-image: linear-gradient(160deg, #020611 0%, #091c31 50%, #102e4d 100%);
+  font-family: 'Montserrat', sans-serif;
+  background-image: linear-gradient(160deg, #000000 0%, #051528 50%, #0a3764 100%);
   min-height: 100vh;
   background-attachment: fixed;
   background-color: #091f36;
@@ -251,7 +251,6 @@ body::before {
   color: var(--text);
   font-weight: bold;
   font-size: var(--fs-medium);
-  font-family: sans-serif;
   white-space: nowrap;
   background: var(--primary);
   border: solid 1px transparent;
@@ -446,7 +445,6 @@ body::before {
 .item__name {
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
   font-size: var(--fs-large);
 }
 
@@ -556,7 +554,6 @@ body::before {
 }
 
 .description__logo {
-  font-family: sans-serif;
   font-weight: bold;
   font-size: var(--fs-large);
   padding: 0;
@@ -582,7 +579,6 @@ body::before {
 }
 
 .categories__title {
-  font-family: sans-serif;
   padding: 0;
   margin: 0;
   font-weight: bold;
@@ -626,7 +622,6 @@ body::before {
 .contact__title {
   font-size: var(--fs-large);
   font-weight: bold;
-  font-family: sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -671,7 +666,7 @@ body::before {
 
 
 
-@media screen and (min-width: 883px) and (max-width: 1152px) {
+@media screen and (min-width: 883px) and (max-width: 1155px) {
   .cart {
     width: 100%;
     max-width: 1000px;
@@ -786,6 +781,7 @@ body::before {
 
   @media (hover: hover) {
     .back-to-top:hover {
+    cursor: pointer;
     background-color: var(--primary);
     color: var(--text);
     box-shadow: 0 0 12px rgba(79,168,255,.8);
