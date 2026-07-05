@@ -26,7 +26,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-image: linear-gradient(160deg, #000000 0%, #051528 50%, #0a3764 100%);
   min-height: 100vh;
   background-attachment: fixed;
