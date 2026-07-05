@@ -307,6 +307,7 @@ body::before {
 
 .cart-right__label {
   font-weight: bold;
+  align-self: center;
 }
 
 .cart__summary-row {
