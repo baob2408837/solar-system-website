@@ -6,11 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Giỏ hàng</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="cart.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
 </head>
+
 <body class="page">
   <main class="main">
     <section class="cart">
@@ -58,12 +62,12 @@
         <div class="cart__right">
           <h2 class="cart-right__title">Tóm tắt thanh toán</h2>
           <p class="cart__summary-row">
-              <span class="cart-right__label">Tạm tính: </span>
-              <span>Giá tiền</span>
+            <span class="cart-right__label">Tạm tính: </span>
+            <span>Giá tiền</span>
           </p>
           <p class="cart__summary-row">
-              <span class="cart-right__label">Phí vận chuyển:</span> 
-              <span>Miễn phí</span>
+            <span class="cart-right__label">Phí vận chuyển:</span>
+            <span>Miễn phí</span>
           </p>
           <div class="cart__coupon">
             <span class="cart-right__label">Mã giảm giá:</span>
@@ -86,7 +90,8 @@
   <footer class="footer">
     <div class="footer__main">
       <div class="description">
-        <p class="description__logo"><span class="logo__first-half">Space</span><span class="logo__second-half">Store</span></p>
+        <p class="description__logo"><span class="logo__first-half">Space</span><span
+            class="logo__second-half">Store</span></p>
         <p class="description__text">Website giới thiệu kiến thức về các hành tinh khí khổng lồ trong Hệ Mặt Trời</p>
       </div>
       <div class="categories">
@@ -100,8 +105,10 @@
       </div>
       <div class="contact">
         <p class="contact__title">Theo dõi</p>
-        <a class="contact__link" target="_blank" href="#"><i class="fab fa-facebook contact__link--icon"></i> Facebook</a>
-        <a class="contact__link" target="_blank" href="#"><i class="fab fa-instagram contact__link--icon"></i> Instagram</a>
+        <a class="contact__link" target="_blank" href="#"><i class="fab fa-facebook contact__link--icon"></i>
+          Facebook</a>
+        <a class="contact__link" target="_blank" href="#"><i class="fab fa-instagram contact__link--icon"></i>
+          Instagram</a>
         <a class="contact__link" target="_blank" href="#"><i class="fab fa-github contact__link--icon"></i> Github</a>
       </div>
     </div>
@@ -110,9 +117,58 @@
     </div>
   </footer>
 
-<!--===================BACK TO TOP BUTTON==================-->
+  <!--=========================CHECKOUT=========================-->
+  <div class="checkout-overlay">
+    <section class="checkout">
+      <div class="checkout__container">
+        <button type="button" class="checkout__close">X</button>
 
-  <button id="backtoTop" class="back-to-top show" aria-label="Quay lại đầu trang">&#11014;</button>
+        <h1>Đơn đặt hàng</h1>
+
+        <h2>1. Địa chỉ liên lạc</h2>
+
+        <div class="checkout__input">
+          <div class="firstname__input">
+            <label for="firstname">Tên</label>
+            <input type="text" id="firstname" class="firstname" placeholder="Tên...">
+          </div>
+          <div class="lastname__input">
+            <label for="lastname">Họ</label>
+            <input type="text" class="lastname" placeholder="Họ...">
+          </div>
+        </div>
+        <div class="checkout__input">
+          <div class="phone">
+            <label for="phone">Số điện thoại</label>
+            <input type="text" class="phone__input" placeholder="Ví dụ: 0123 456 789">
+          </div>
+          <div class="email">
+            <label for="email">Email</label>
+            <input type="text" id="email" class="email__input" placeholder="Ví dụ: abc@gmail.com">
+          </div>
+        </div>
+
+        <h2>Thông tin giao hàng</h2>
+
+        <div class="checkout__input">
+          <div class="city">
+            <label for="city">Quốc gia</label>
+            <input type="text" class="city__input" placeholder="Ví dụ:Việt Nam, Trung Quốc,...">
+          </div>
+          <div class="address">
+            <label for="address">Địa chỉ</label>
+            <input type="text" class="address__input" placeholder="Ví dụ: Khu 2, Đ. 3/2, P.Ninh Kiều, TP. Cần Thơ">
+          </div>
+        </div>
+        <button type="button">Hoàn tất đặt hàng</button>
+      </div>
+    </section>
+  </div>
+
+  <!--===================BACK TO TOP BUTTON==================-->
+
+  <button id="backtoTop" class="back-to-top show">&#11014;</button>
 
 </body>
+
 </html>

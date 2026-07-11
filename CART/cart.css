@@ -13,7 +13,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient( 180deg, var(--primary), #00e5ff);
+  background: linear-gradient(180deg, var(--primary), #00e5ff);
   border-radius: 5px;
 }
 
@@ -27,7 +27,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-  background-image: linear-gradient(160deg, #000000 0%, #051528 50%, #0a3764 100%);
+  background-image: linear-gradient(160deg, #020611 0%, #091c31 50%, #102e4d 100%);
   min-height: 100vh;
   background-attachment: fixed;
   background-color: #091f36;
@@ -35,13 +35,25 @@ body {
 
 .page {
   display: grid;
-  grid-template-areas: "main" "footer";
-  grid-template-rows: 1fr auto;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: auto 1fr auto;
   width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   position: relative;
+}
+
+header {
+  grid-area: "header";
+}
+
+main {
+  grid-area: "main";
+}
+
+footer {
+  grid-area: "footer";
 }
 
 ul {
@@ -69,7 +81,7 @@ a {
 
 
 
-/*================================ 
+  /*================================ 
               COLOR 
 ================================*/
 
@@ -85,7 +97,7 @@ a {
 
 
 
-/*================================= 
+  /*================================= 
              FONT-SIZE 
 =================================*/
 
@@ -105,7 +117,7 @@ a {
 
 
 body::before {
-  content:"";
+  content: "";
   position: fixed;
   inset: 0;
   background-image:
@@ -115,7 +127,7 @@ body::before {
     radial-gradient(circle at 30% 80%, white 1px, transparent 2px),
     radial-gradient(circle at 10% 50%, white 1px, transparent 2px),
     radial-gradient(circle at 60% 40%, #8ed0ff 1px, transparent 2px),
-    radial-gradient(circle at 90% 20%, #8ed0ff 1px, transparent 2px); 
+    radial-gradient(circle at 90% 20%, #8ed0ff 1px, transparent 2px);
   opacity: 0.55;
   pointer-events: none;
   z-index: -2;
@@ -200,7 +212,7 @@ body::before {
   gap: 30px;
   align-content: start;
   grid-auto-rows: max-content;
-  margin-left:-20px;
+  margin-left: -20px;
   margin-top: -20px;
   padding: 20px 10px 50px 20px;
   max-height: 450px;
@@ -221,7 +233,7 @@ body::before {
 }
 
 .cart__item-list::-webkit-scrollbar-thumb {
-  background: linear-gradient( 180deg, var(--primary), #00e5ff);
+  background: linear-gradient(180deg, var(--primary), #00e5ff);
   border-radius: 5px;
 }
 
@@ -251,6 +263,7 @@ body::before {
   color: var(--text);
   font-weight: bold;
   font-size: var(--fs-medium);
+  font-family: sans-serif;
   white-space: nowrap;
   background: var(--primary);
   border: solid 1px transparent;
@@ -262,7 +275,7 @@ body::before {
 .cart-return__link:hover {
   cursor: pointer;
   border: solid 1px var(--primary);
-  box-shadow: 0 0 12px rgba(79,168,255,.8);
+  box-shadow: 0 0 12px rgba(79, 168, 255, .8);
   transform: translateY(-5px);
 }
 
@@ -307,7 +320,6 @@ body::before {
 
 .cart-right__label {
   font-weight: bold;
-  align-self: center;
 }
 
 .cart__summary-row {
@@ -338,7 +350,7 @@ body::before {
 .coupon__text:focus {
   outline: none;
   border: solid 1px var(--primary);
-  box-shadow: 0 0 12px rgba(79,168,255,.8);
+  box-shadow: 0 0 12px rgba(79, 168, 255, .8);
 }
 
 .coupon__submit {
@@ -355,7 +367,7 @@ body::before {
   cursor: pointer;
   opacity: 0.9;
   border: solid 1px var(--primary);
-  box-shadow: 0 0 12px rgba(79,168,255,.8);
+  box-shadow: 0 0 12px rgba(79, 168, 255, .8);
 }
 
 .cart-right__divider {
@@ -374,11 +386,11 @@ body::before {
   padding: 15px 0;
   font-size: var(--fs-medium);
   font-weight: bold;
-  background-image: linear-gradient( 140deg, #4fa8ff 0%, #00e5ff 100%);
+  background-image: linear-gradient(to right, #4fa8ff, #00e5ff);
   color: var(--text);
   border: solid 1px transparent;
   border-radius: 10px;
-  box-shadow: 0 0 12px rgba(79,168,255,.8);
+  box-shadow: 0 0 12px rgba(79, 168, 255, .8);
   transition: all 0.2s ease-in-out;
 }
 
@@ -420,7 +432,7 @@ body::before {
 .cart__item:hover {
   transform: translateY(-10px);
   border: solid 1px var(--primary);
-  box-shadow: 0 20px 35px rgba(79,168,255,.18);
+  box-shadow: 0 20px 35px rgba(79, 168, 255, .18);
 }
 
 .item__img {
@@ -446,6 +458,7 @@ body::before {
 .item__name {
   padding: 0;
   margin: 0;
+  font-family: sans-serif;
   font-size: var(--fs-large);
 }
 
@@ -477,13 +490,13 @@ body::before {
 
 .quantity__button:hover {
   cursor: pointer;
-  box-shadow: 0 0 12px rgba(79,168,255,.8);
-  opacity: 0.8;
+  box-shadow: 0 0 12px rgba(79, 168, 255, .8);
+  opacity: .8;
   border: solid 1px var(--primary);
 }
 
 .quantity__button:active {
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .item__delete {
@@ -555,6 +568,7 @@ body::before {
 }
 
 .description__logo {
+  font-family: sans-serif;
   font-weight: bold;
   font-size: var(--fs-large);
   padding: 0;
@@ -570,20 +584,17 @@ body::before {
   color: var(--primary);
 }
 
-.description__text {
-  line-height: 28px;
-}
-
 .categories {
   grid-column: 2;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: start;
-  gap: 10px;
+  gap: 5px;
 }
 
 .categories__title {
+  font-family: sans-serif;
   padding: 0;
   margin: 0;
   font-weight: bold;
@@ -594,7 +605,7 @@ body::before {
   padding-top: 5px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px;
 }
 
 .categories__link {
@@ -621,13 +632,14 @@ body::before {
   flex-direction: column;
   align-items: start;
   justify-content: start;
-  gap: 12px;
+  gap: 5px;
 }
 
 .contact__title {
   font-size: var(--fs-large);
   font-weight: bold;
-  padding: 0 0 6px 0;
+  font-family: sans-serif;
+  padding: 0;
   margin: 0;
 }
 
@@ -640,7 +652,7 @@ body::before {
 
 .contact__link:hover {
   color: var(--text);
-  transform: translateX(8px);
+  transform: translateX(10px);
 }
 
 .footer__copyright {
@@ -658,6 +670,124 @@ body::before {
 }
 
 /*=================================
+            CHECKOUT
+=================================*/
+
+
+/*=========CHECKOUT SETUP=========*/
+
+.checkout-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(2, 6, 17, 0.75);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.checkout {
+  width: 60%;
+  height: 70%;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  background-color: var(--card);
+  border: solid 1px var(--border);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.checkout__container {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
+  padding: 10% 10%;
+  gap: 20px;
+}
+
+
+
+.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/*========CHECKOUT STYLE=========*/
+
+.checkout h1 {
+  color: var(--primary);
+  padding: 0;
+  margin: 0;
+}
+
+.checkout h2 {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px 0 0 0;
+  margin: 0;
+  color: var(--text);
+}
+
+.checkout__input {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 60px;
+  justify-content: start;
+  gap: 10%;
+}
+
+.checkout__input div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 45%;
+}
+
+.checkout__input label {
+  color: var(--text);
+}
+
+.checkout__input input {
+  display: block;
+  border: solid 1px transparent;
+  border-radius: 10px;
+  height: 40px;
+  width: 100%;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.checkout__input input:focus {
+  outline: none;
+  border: solid 1px rgba(79, 168, 255, .8);
+  box-shadow: 0 0 12px rgba(79, 168, 255, .8);
+}
+
+.checkout__close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+
+/*=================================
         BACK TO TOP BUTTON
 =================================*/
 
@@ -671,7 +801,7 @@ body::before {
 
 
 
-@media screen and (min-width: 883px) and (max-width: 1155px) {
+@media screen and (min-width: 883px) and (max-width: 1152px) {
   .cart {
     width: 100%;
     max-width: 1000px;
@@ -786,10 +916,9 @@ body::before {
 
   @media (hover: hover) {
     .back-to-top:hover {
-    cursor: pointer;
-    background-color: var(--primary);
-    color: var(--text);
-    box-shadow: 0 0 12px rgba(79,168,255,.8);
+      background-color: var(--primary);
+      color: var(--text);
+      box-shadow: 0 0 12px rgba(79, 168, 255, .8);
     }
   }
 }
