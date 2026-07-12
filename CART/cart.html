@@ -81,7 +81,7 @@
             <span class="cart-right__main-label">Tổng tiền: </span>
             <strong>Giá tiền</strong>
           </p>
-          <button class="cart-right__submit" type="submit">Đặt hàng</button>
+          <button class="cart-right__submit" type="submit" id="checkoutSubmitBtn">Đặt hàng</button>
         </div>
       </div>
     </section>
@@ -118,55 +118,72 @@
   </footer>
 
   <!--=========================CHECKOUT=========================-->
-  <div class="checkout-overlay">
-    <section class="checkout">
+
+  <div class="checkout-overlay" id="overlay">
+    <section class="checkout" id="checkout">
       <div class="checkout__container">
-        <button type="button" class="checkout__close">X</button>
+        <div class="checkout__logo">
+          <i class="fa-solid fa-earth-asia logo"></i>
+          <div class="checkout__logo-text">
+            <h1 class="logo__title">Planet Journey</h1>
+            <p class="logo__text">Khám phá vũ trụ trong tầm tay</p>
+          </div>
+        </div>
+        <button type="button" class="checkout__close" id="checkoutCloseBtn">X</button>
 
         <h1>Đơn đặt hàng</h1>
 
         <h2>1. Địa chỉ liên lạc</h2>
-
-        <div class="checkout__input">
-          <div class="firstname__input">
-            <label for="firstname">Tên</label>
-            <input type="text" id="firstname" class="firstname" placeholder="Tên...">
-          </div>
-          <div class="lastname__input">
-            <label for="lastname">Họ</label>
-            <input type="text" class="lastname" placeholder="Họ...">
+        <div class="checkout-input__container">
+          <div class="checkout__input">
+            <div class="firstname__input">
+              <label for="firstname">Tên</label>
+              <input type="text" id="firstname" class="firstname input" placeholder="Tên...">
+            </div>
+            <div class="lastname__input">
+              <label for="lastname">Họ</label>
+              <input type="text" class="lastname input" placeholder="Họ...">
+            </div>
           </div>
         </div>
-        <div class="checkout__input">
-          <div class="phone">
-            <label for="phone">Số điện thoại</label>
-            <input type="text" class="phone__input" placeholder="Ví dụ: 0123 456 789">
-          </div>
-          <div class="email">
-            <label for="email">Email</label>
-            <input type="text" id="email" class="email__input" placeholder="Ví dụ: abc@gmail.com">
+        <div class="checkout-input__container">
+          <div class="checkout__input">
+            <div class="phone">
+              <label for="phone"><i class="fa-solid fa-phone"></i> Số điện thoại</label>
+              <input type="text" id="phone" class="phone__input input" placeholder="Ví dụ: 0123 456 789">
+            </div>
+            <div class="email">
+              <label for="email"><i class="fa-regular fa-envelope"></i> Email</label>
+              <input type="text" id="email" class="email__input input" placeholder="Ví dụ: abc@gmail.com">
+            </div>
           </div>
         </div>
 
         <h2>Thông tin giao hàng</h2>
 
-        <div class="checkout__input">
-          <div class="city">
-            <label for="city">Quốc gia</label>
-            <input type="text" class="city__input" placeholder="Ví dụ:Việt Nam, Trung Quốc,...">
-          </div>
-          <div class="address">
-            <label for="address">Địa chỉ</label>
-            <input type="text" class="address__input" placeholder="Ví dụ: Khu 2, Đ. 3/2, P.Ninh Kiều, TP. Cần Thơ">
+        <div class="checkout-input__container">
+          <div class="checkout__input">
+            <div class="city">
+              <label for="city"><i class="fa-solid fa-globe"></i> Quốc gia</label>
+              <input type="text" class="city__input input" placeholder="Ví dụ:Việt Nam, Trung Quốc,...">
+            </div>
+            <div class="address">
+              <label for="address"><i class="fa-solid fa-house"></i> Địa chỉ</label>
+              <input type="text" class="address__input input"
+                placeholder="Ví dụ: Khu 2, Đ. 3/2, P.Ninh Kiều, TP. Cần Thơ">
+            </div>
           </div>
         </div>
-        <button type="button">Hoàn tất đặt hàng</button>
+        <div class="button-wrapper">
+          <button type="button" class="checkout__submit" id="submitBtn">Hoàn tất đặt hàng</button>
+        </div>
       </div>
     </section>
   </div>
 
   <!--===================BACK TO TOP BUTTON==================-->
 
+  <script src="cart.js"></script>
   <button id="backtoTop" class="back-to-top show">&#11014;</button>
 
 </body>
