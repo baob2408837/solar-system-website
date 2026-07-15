@@ -419,6 +419,7 @@ header {
   gap: 30px;
   align-content: start;
   grid-auto-rows: max-content;
+  border-radius: 5px;
   margin-left: -20px;
   margin-top: -20px;
   padding: 20px 10px 50px 20px;
@@ -638,8 +639,7 @@ header {
 
 .cart__item {
   width: 100%;
-  height: max-content;
-  min-height: max-content;
+  height: 420px;
   padding: 0;
   border: solid 1px transparent;
   border-radius: 10px;
@@ -650,7 +650,6 @@ header {
   transition: transform 0.2s ease-in-out;
   overflow: hidden;
   flex-shrink: 0;
-  height: auto;
 }
 
 .cart__item:hover {
@@ -661,15 +660,18 @@ header {
 
 .item__img {
   width: 100%;
-  height: 150px;
+  height: 230px;
   background-color: white;
   flex-shrink: 0;
+  object-fit: cover;
+  object-position: center;
 }
 
 .item__info {
   position: relative;
   display: flex;
   flex-direction: column;
+  flex: 1;
   background-color: var(--card);
   color: var(--text);
   padding: 10px 15px;
@@ -680,6 +682,9 @@ header {
 }
 
 .item__name {
+  line-height: 1.2;
+  height: 80px;
+  display: block;
   padding: 0;
   margin: 0;
   font-family: sans-serif;
@@ -687,8 +692,9 @@ header {
 }
 
 .item__price {
-  padding: 10px 0 0 0;
+  padding: 0 0 0 0;
   margin: 0;
+  margin-top: auto;
   color: var(--primary);
   font-size: var(--fs-medium);
 }
@@ -721,6 +727,14 @@ header {
 
 .quantity__button:active {
   opacity: 1;
+}
+
+.quantity__number {
+  display: block;
+  width: 5px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 .item__delete {

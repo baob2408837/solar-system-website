@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="welcome">
+            <div class="welcome__text">
+                <p><span class="icon-rocket">🚀</span> Chào mừng bạn đến với Space Store!</p>
+            </div>
+            <div class="welcome__link">
+                <div class="welcome__config">
+                    <a class="welcome__sign-in" href="#"><i class="far fa-user"></i> Đăng nhập</a>
+                    <span class="welcome__divider">/</span>
+                    <a class="welcome__register" href="#">Đăng ký</a>
+                </div>
+                <a class="welcome__cart" href="#">
+                    <i class="fas fa-cart-shopping"></i> Giỏ hàng
+                    <span id="cart-count" class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="header__bottom-bar">
+            <div class="logo-area">
+                <img class="logo-area__img" src="images/html-logo.png" alt="logo">
+                <div class="logo-area__text">
+                    <h1>Planet Journey</h1>
+                    <p>Khám phá vũ trụ trong tầm tay</p>
+                </div>
+            </div>
+
+            <nav class="nav-bar">
+                <ul class="nav-bar__nav">
+                    <li class="nav-bar__item"><a class="nav-bar__link" href="#">Trang chủ</a></li>
+                    <li class="nav-bar__item"><a class="nav-bar__link" href="#">Hành tinh Đất đá</a></li>
+                    <li class="nav-bar__item"><a class="nav-bar__link" href="#">Hành tinh Khí khổng lồ</a></li>
+                    <li class="nav-bar__item">
+                        <a class="nav-bar__link nav-bar__link--active" href="#">Space Store</a>
+                        <ul class="dropdown-submenu">
+                            <li><a href="#">🌍 Mô hình hành tinh</a></li>
+                            <li><a href="#">🎁 Quà lưu niệm</a></li>
+                            <li><a href="#">📚 Sách thiên văn</a></li>
+                            <li><a href="#">🔭 Kính thiên văn</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-bar__item"><a class="nav-bar__link" href="#">Giỏ hàng</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-banner">
+            <div class="hero-banner__content">
+                <h2>KHÁM PHÁ VŨ TRỤ<br>TRONG TẦM TAY</h2>
+                <p>Bộ sưu tập thiên thạch, mô hình hành tinh và sản phẩm không gian độc đáo.</p>
+                <a href="#" class="hero-banner__btn">Khám phá ngay</a>
+            </div>
+        </section>
+
+        <section class="products">
+            <h2>TẤT CẢ SẢN PHẨM</h2>
+            <div class="product-list">
+
+                <article class="product">
+                    <p class="product__id">1</p>
+                    <img src="./images/DSC06418.jpg" alt="Sách thiên văn học">
+                    <h3>Sách Thiên Văn Học</h3>
+                    <p class="product__price">150.000₫</p>
+                    <p class="product__description">
+                        Cuốn sách thiên văn học toàn diện với hình ảnh đẹp và kiến thức sâu về vũ trụ.
+                    </p>
+                    <div class="product__buttons">
+                        <button class="product__btn-buy">Mua ngay</button>
+                        <button class="product__btn-cart" onclick="addToCart()">Thêm vào giỏ</button>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <p class="product__id">2</p>
+                    <img src="./images/saohoa.jpg" alt="Mô hình Sao Hỏa">
+                    <h3>Mô hình Sao Hỏa</h3>
+                    <p class="product__price">850.000₫</p>
+                    <p class="product__description">
+                        Mô hình Sao Hỏa chi tiết với bề mặt đỏ rực rỡ. Được chế tạo từ vật liệu cao cấp.
+                    </p>
+                    <div class="product__buttons">
+                        <button class="product__btn-buy">Mua ngay</button>
+                        <button class="product__btn-cart" onclick="addToCart()">Thêm vào giỏ</button>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <p class="product__id">3</p>
+                    <img src="./images/saomoc.jpg" alt="Mô hình Sao Mộc">
+                    <h3>Mô hình Sao Mộc</h3>
+                    <p class="product__price">1.200.000₫</p>
+                    <p class="product__description">
+                        Mô hình Sao Mộc khổng lồ với các vệ tinh nhỏ. Đây là sản phẩm tuyệt vời.
+                    </p>
+                    <div class="product__buttons">
+                        <button class="product__btn-buy">Mua ngay</button>
+                        <button class="product__btn-cart" onclick="addToCart()">Thêm vào giỏ</button>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <p class="product__id">4</p>
+                    <img src="./images/45.jpg" alt="Kính thiên văn mini">
+                    <h3>Kính Thiên Văn Mini</h3>
+                    <p class="product__price">3.000.000₫</p>
+                    <p class="product__description">
+                        Kính thiên văn mini chuyên nghiệp với độ phóng đại cao. Dễ dàng sử dụng.
+                    </p>
+                    <div class="product__buttons">
+                        <button class="product__btn-buy">Mua ngay</button>
+                        <button class="product__btn-cart" onclick="addToCart()">Thêm vào giỏ</button>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <p class="product__id">5</p>
+                    <img src="./images/saotho.jpg" alt="Mô hình Sao Thổ">
+                    <h3>Mô hình Sao Thổ</h3>
+                    <p class="product__price">1.450.000₫</p>
+                    <p class="product__description">
+                        Mô hình Sao Thổ với hệ thống vành đai tinh xảo, chất liệu nhựa ABS cao cấp.
+                    </p>
+                    <div class="product__buttons">
+                        <button class="product__btn-buy">Mua ngay</button>
+                        <button class="product__btn-cart" onclick="addToCart()">Thêm vào giỏ</button>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <p class="product__id">6</p>
+                    <img src="./images/12.jpg" alt="Mô hình Trái Đất">
+                    <h3>Móc khoá phi hành gia</h3>
+                    <p class="product__price">95.000₫</p>
+                    <p class="product__description">
+                        Mô hình địa cầu tích hợp đèn LED phát sáng, mô phỏng chân thực các châu lục.
+                    </p>
+                    <div class="product__buttons">
+                        <button class="product__btn-buy">Mua ngay</button>
+                        <button class="product__btn-cart" onclick="addToCart()">Thêm vào giỏ</button>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <p class="product__id">7</p>
+                    <img src="./images/tauvutru.jpg" alt="Đèn chiếu phi hành gia">
+                    <h3>Mô hình lắp ghép tàu vũ trụ</h3>
+                    <p class="product__price">450.000₫</p>
+                    <p class="product__description">
+                        Mô Hình Lắp Ghép 3D Mini Bệ Phóng Tàu Vũ trụ và Tên Lửa Không Gian - Bộ Đồ Chơi Phát Triển Trí
+                        Tuệ Cho Bé.
+                    </p>
+                    <div class="product__buttons">
+                        <button class="product__btn-buy">Mua ngay</button>
+                        <button class="product__btn-cart" onclick="addToCart()">Thêm vào giỏ</button>
+                    </div>
+                </article>
+
+                <article class="product">
+                    <p class="product__id">8</p>
+                    <img src="./images/mhhmt.jpg" alt="Mảnh thiên thạch lưu niệm">
+                    <h3>Mô hình Hệ Mặt Trời</h3>
+                    <p class="product__price">650.000₫</p>
+                    <p class="product__description">
+                        Mô hình gồm 9 hành tinh hệ mặt trời pha lê.
+                    </p>
+                    <div class="product__buttons">
+                        <button class="product__btn-buy">Mua ngay</button>
+                        <button class="product__btn-cart" onclick="addToCart()">Thêm vào giỏ</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+    <script src="storesystem.js"></script>
+    <script src="scrips.js"></script>
+</body>
+
+</html>
