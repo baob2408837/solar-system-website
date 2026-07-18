@@ -208,12 +208,10 @@ header {
 
 .top-links a:hover {
   color: var(--primary);
-  transform: translateY(-2px);
 }
 
 .top-links a:active {
   color: rgb(32, 89, 146);
-  transform: translateY(0);
 }
 
 .navbar {
@@ -994,6 +992,8 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 400px;
+  max-width: calc(100% - 40px);
   z-index: 1000;
 }
 
@@ -1003,8 +1003,7 @@ header {
 
 .modal-container {
   background: var(--card);
-  width: 400px;
-  max-width: calc(100% - 40px);
+  width: 100%;
   min-height: 200px;
   position: relative;
   border: solid 1px rgb(79, 168, 255);

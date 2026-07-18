@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ hàng</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="cartwireframe.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+
+  <link rel="icon" href="data:,">
+</head>
+
+<body class="page">
+
+  <!--===================HEADER==================-->
+
+  <header>
+    <div class="top-bar">
+      <p>🚀 Chào mừng bạn đến với Planet Journey!</p>
+      <div class="top-links">
+        <div class="top-bar__login">
+          <a href="#" class="js-login">
+            <i class="fa-regular fa-user"></i>
+            Đăng nhập
+          </a>
+          <span>/</span>
+          <a href="#" class="js-signup">
+            Đăng ký
+          </a>
+        </div>
+        <a href="/CART/cart.html">
+          <i class="fa-solid fa-cart-shopping"></i>
+          Giỏ hàng
+        </a>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-earth-asia"></i>
+        <div>
+          <h1>Planet Journey</h1>
+          <span>Khám phá vũ trụ trong tầm tay</span>
+        </div>
+      </div>
+
+      <ul class="menu">
+        <li><a href="/home-page/space-store/index.html">Trang chủ</a></li>
+        <li><a href="/HÀNH TINH ĐẤT ĐÁ/index.html">Hành tinh Đất đá</a></li>
+        <li><a href="/GIANT-PLANETS/giant-planets.html">Hành tinh Khí khổng lồ</a></li>
+        <li><a href="/Space Store/index.html">Space Store</a></li>
+        <li><a href="/CART/cart.html">Giỏ hàng</a></li>
+      </ul>
+
+      <button class="navbar__mobile" type="button"><i class="fa-solid fa-bars"></i></button>
+
+    </nav>
+  </header>
+
+  <!--===============MOBILE MENU================-->
+
+  <div class="mobile-menu">
+    <div class="menu-toggle">
+      <button class="mobile-menu__toggle" type="button"><i class="fa-solid fa-bars"></i></button>
+      <ul class="dropdown">
+        <li><a href="/home-page/space-store/index.html">Trang chủ</a></li>
+        <li><a href="/HÀNH TINH ĐẤT ĐÁ/index.html">Hành tinh Đất đá</a></li>
+        <li><a href="/GIANT-PLANETS/giant-planets.html">Hành tinh Khí khổng lồ</a></li>
+        <li><a href="/Space Store/index.html">Space Store</a></li>
+        <li><a href="/CART/cart.html">Giỏ hàng</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!--====================MAIN======================-->
+
+  <main class="main">
+    <section class="cart">
+      <h1 class="cart__title">Giỏ hàng của bạn</h1>
+      <div class="cart__container">
+        <div class="cart__left">
+          <div class="cart__item-list">
+            <!--Item sẽ được dán ở đây bằng file cartsystem.js-->
+          </div>
+          <div class="cart-return">
+            <p class="cart-return__text">Bạn vẫn chưa mua sắm đủ? Hãy đến ngay với Space Store!</p>
+            <a class="cart-return__link" href="/Space Store/index.html">
+              <span class="return-link__text">Đến Space Store</span>
+              <i class="fa-solid fa-arrow-right icon-arrow"></i>
+            </a>
+          </div>
+        </div>
+        <div class="cart__right">
+          <h2 class="cart-right__title">Tóm tắt thanh toán</h2>
+          <p class="cart__summary-row">
+            <span class="cart-right__label">Tạm tính: </span>
+            <span class="tempPrice">Giá tiền</span>
+          </p>
+          <p class="cart__summary-row">
+            <span class="cart-right__label">Phí vận chuyển:</span>
+            <span>Miễn phí</span>
+          </p>
+          <div class="cart__coupon">
+            <span class="cart-right__label">Mã giảm giá:</span>
+            <form class="coupon__group" action="#" method="post">
+              <input class="coupon__text" type="text" placeholder="nhập mã...">
+              <button class="coupon__submit" type="button">Áp dụng</button>
+            </form>
+          </div>
+          <hr class="cart-right__divider">
+          <p class="cart-right__total-price">
+            <span class="cart-right__main-label">Tổng tiền: </span>
+            <strong class="sumPrice">Giá tiền</strong>
+          </p>
+          <button class="cart-right__submit" type="submit" id="checkoutSubmitBtn">Đặt hàng</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--=======================FOOTER=====================-->
+
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="description">
+        <p class="description__logo"><span class="logo__first-half">Space</span><span
+            class="logo__second-half">Store</span></p>
+        <p class="description__text">Website giới thiệu kiến thức về các hành tinh khí khổng lồ trong Hệ Mặt Trời</p>
+      </div>
+      <div class="categories">
+        <p class="categories__title">Danh mục</p>
+        <ul class="categories__list">
+          <li><a class="categories__link" href="/home-page/space-store/index.html">Trang chủ</a></li>
+          <li><a class="categories__link" href="/GIANT-PLANETS/giant-planets.html">Các hành tinh khí khổng lồ</a></li>
+          <li><a class="categories__link" href="/HÀNH TINH ĐẤT ĐÁ/index.html">Các hành tinh đất đá</a></li>
+          <li><a class="categories__link" href="/Space Store/index.html">Space Store</a></li>
+        </ul>
+      </div>
+      <div class="contact">
+        <p class="contact__title">Theo dõi</p>
+        <a class="contact__link" target="_blank" href="#"><i class="fab fa-facebook contact__link--icon"></i>
+          Facebook</a>
+        <a class="contact__link" target="_blank" href="#"><i class="fab fa-instagram contact__link--icon"></i>
+          Instagram</a>
+        <a class="contact__link" target="_blank" href="#"><i class="fab fa-github contact__link--icon"></i> Github</a>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      <p class="copyright__text">&copy; 2026 Space Store | Giant Planets Project</p>
+    </div>
+  </footer>
+
+  <!--=========================OVERLAY========================= -->
+
+  <div class="overlay" id="overlay"></div>
+
+  <!--=======================SIGN IN MENU======================-->
+
+  <div class="modal js-modal signinMenu">
+    <div class="modal-container js-modal-container">
+      <div class="modal-header">
+        <i class="fa-solid fa-xmark js-xmark" id="signinClose"></i>
+        <div class="modal-tag">
+          <div class="modal-signin-logo">
+            <i class="fa-solid fa-earth-asia"></i>
+            <div>
+              <h2>Planet Journey</h2>
+            </div>
+          </div>
+          <h3>Đăng nhập tài khoản</h3>
+        </div>
+      </div>
+      <div class="modal-body">
+        <label for="log-in-email" class="modal-label">
+          <i class="fa-regular fa-envelope"></i> Email
+        </label>
+        <input id="signinEmail" type="email" class="modal-input sign-in-input" placeholder="Nhập email của bạn">
+        <label for="signinPassword" class="modal-label">
+          <i class="fa-solid fa-lock"></i> Mật khẩu
+        </label>
+        <div class="password-box">
+          <input type="password" id="signinPassword" class="modal-input sign-in-input" placeholder="Nhập mật khẩu">
+          <i class="fa-solid fa-eye-slash fa-fw" id="togglePassword"></i>
+        </div>
+        <button id="signinSubmitButton">ĐĂNG NHẬP</button>
+      </div>
+      <div class="modal-footer">
+        <p class="divider-text">Hoặc đăng nhập bằng</p>
+        <div class="social-login">
+          <a href="#" target="_blank" class="social-btn google">
+            <img src="images/google.png" alt="Google">
+            <span>Google</span>
+          </a>
+          <a href="#" target="_blank" class="social-btn facebook">
+            <img src="images/facebook.png" alt="Facebook">
+            <span>Facebook</span>
+          </a>
+        </div>
+        <p class="footer-end">Bạn chưa có tài khoản?<a href="#" class="js-register-btn">Đăng ký ngay</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!--================SIGN UP MENU==============-->
+
+  <div class="modal-register js-modal-register signupMenu">
+    <div class="modal-container">
+      <div class="modal-header">
+        <i class="fa-solid fa-xmark js-xmarkReg" id="signupClose"></i>
+        <div class="modal-tag">
+          <div class="modal-signup-logo">
+            <i class="fa-solid fa-earth-asia"></i>
+            <div>
+              <h2>Planet Journey</h2>
+            </div>
+          </div>
+          <h3>Tạo tài khoản mới</h3>
+          <p>Đăng ký để khám phá những điểu thú vị về vũ trụ!</p>
+        </div>
+      </div>
+      <div class="signup-modal-body">
+        <div class="name-and-tel">
+          <div class="body-box box-name">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" id="name" class="signupInput" placeholder="Họ và tên">
+          </div>
+          <div class="body-box box-tel">
+            <i class="fa-solid fa-phone"></i>
+            <input type="tel" id="number-phone" class="signupInput signup-phone" placeholder="Số điện thoại">
+          </div>
+        </div>
+        <div class="body-box">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="text" id="email-register" class="signupInput signup-email" placeholder="Nhập email">
+        </div>
+        <div class="body-box">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="signupPassword" class="signupInput signup-password" placeholder="Nhập mật khẩu">
+          <i class="fa-solid fa-eye-slash fa-fw" id="toggleSignupPassword"></i>
+        </div>
+        <div class="body-box">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="signupConfirmPassword" class="signupInput signup-confirm-password"
+            placeholder="Xác nhận mật khẩu">
+          <i class="fa-solid fa-eye-slash fa-fw" id="toggleSignupConfirmPassword"></i>
+        </div>
+        <div class="register-agree">
+          <input type="checkbox" id="checkboxValue">
+          <p>Tôi đồng ý với <a href="#">Điều khoản sử dụng</a> với <a href="#">Chính sách bảo mật</a></p>
+        </div>
+        <button id="signupSubmitButton">Đăng ký</button>
+      </div>
+      <div class="modal-footer">
+        <p class="divider-text">Hoặc đăng nhập bằng</p>
+        <div class="social-login">
+          <a href="#" class="social-btn google">
+            <img src="images/google.png" alt="Google">
+            <span>Google</span>
+          </a>
+          <a href="#" class="social-btn facebook">
+            <img src="images/facebook.png" alt="Facebook">
+            <span>Facebook</span>
+          </a>
+        </div>
+        <p class="footer-end">Bạn đã có tài khoản? <a href="#" class="js-login-btn"> Đăng nhập ngay</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!--=========================CHECKOUT=========================-->
+
+  <section class="checkout" id="checkout">
+    <div class="checkout__container">
+      <div class="checkout__logo">
+        <i class="fa-solid fa-earth-asia logo"></i>
+        <div class="checkout__logo-text">
+          <h1 class="logo__title">Planet Journey</h1>
+          <p class="logo__text">Khám phá vũ trụ trong tầm tay</p>
+        </div>
+      </div>
+      <button type="button" class="checkout__close" id="checkoutCloseBtn"><i
+          class="fa-solid fa-xmark js-xmarkReg"></i></button>
+
+      <h1>Đơn đặt hàng</h1>
+
+      <h2>1. Địa chỉ liên lạc</h2>
+      <div class="checkout-input__container">
+        <div class="checkout__input">
+          <div class="firstname__input">
+            <label for="firstname">Tên</label>
+            <input type="text" id="firstname" class="firstname checkoutInput" placeholder="Tên...">
+          </div>
+          <div class="lastname__input">
+            <label for="lastname">Họ</label>
+            <input type="text" id="lastname" class="lastname checkoutInput" placeholder="Họ...">
+          </div>
+        </div>
+      </div>
+      <div class="checkout-input__container">
+        <div class="checkout__input">
+          <div class="phone">
+            <label for="phone"><i class="fa-solid fa-phone"></i> Số điện thoại</label>
+            <input type="text" id="phone" class="phone__input checkoutInput" placeholder="Ví dụ: 0123 456 789">
+          </div>
+          <div class="email">
+            <label for="email"><i class="fa-regular fa-envelope"></i> Email</label>
+            <input type="text" id="email" class="email__input checkoutInput" placeholder="Ví dụ: abc@gmail.com">
+          </div>
+        </div>
+      </div>
+
+      <h2>Thông tin giao hàng</h2>
+
+      <div class="checkout-input__container">
+        <div class="checkout__input">
+          <div class="city">
+            <label for="city"><i class="fa-solid fa-globe"></i> Quốc gia</label>
+            <input type="text" id="city" class="city__input checkoutInput" placeholder="Ví dụ:Việt Nam, Trung Quốc,...">
+          </div>
+          <div class="address">
+            <label for="address"><i class="fa-solid fa-house"></i> Địa chỉ</label>
+            <input type="text" id="address" class="address__input checkoutInput"
+              placeholder="Ví dụ: Khu 2, Đ. 3/2, P.Ninh Kiều, TP. Cần Thơ">
+          </div>
+        </div>
+      </div>
+      <div class="button-wrapper">
+        <button type="button" class="checkout__submit" id="submitBtn">Hoàn tất đặt hàng</button>
+      </div>
+    </div>
+  </section>
+
+  <!--===================BACK TO TOP BUTTON==================-->
+
+  <button id="backToTop" class="back-to-top">&#11014;</button>
+
+  <script src="/CART/cart.js"></script>
+
+</body>
+
+</html>
