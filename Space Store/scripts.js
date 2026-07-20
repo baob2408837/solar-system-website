@@ -29,6 +29,8 @@ Add2Cart.forEach((button) => {
             quantity: 1
         }
 
+        alert(`Đã thêm ${itemName} vào giỏ hàng`);
+
         let updatedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
         let index = isExistedinCart(newItem, updatedCartItems);
 

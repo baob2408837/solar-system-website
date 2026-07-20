@@ -232,6 +232,7 @@ header {
   max-width: 100%;
   overflow: hidden;
   gap: clamp(20px, 8vw, 100px);
+  color: var(--secondary);
 }
 
 .logo {
