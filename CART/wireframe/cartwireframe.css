@@ -1602,12 +1602,6 @@ body::before {
   background: #00e5ff;
 }
 
-.open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-
 .checkout.open {
   transform: translate(-50%, -50%) scale(1);
 }
@@ -1774,6 +1768,12 @@ body::before {
   transform: translateY(3px);
 }
 
+.checkout .open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 
 /*=================================
         BACK TO TOP BUTTON
@@ -1807,6 +1807,12 @@ body::before {
 
 .back-to-top:active {
   transform: translateY(3px);
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 @media (hover: hover) {

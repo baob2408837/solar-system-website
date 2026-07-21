@@ -889,6 +889,12 @@ body::before {
   transform: translateY(3px);
 }
 
+.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
 @media (hover: hover) {
   .back-to-top:hover {
     background-color: var(--primary);

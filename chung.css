@@ -348,11 +348,6 @@ header {
   transition: all 0.2s ease-in-out;
 }
 
-.open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
 
 
 
@@ -864,6 +859,13 @@ header {
 
 .dropdown a:active {
   opacity: 0.8;
+}
+
+
+.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 
