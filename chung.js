@@ -205,10 +205,13 @@ signupInSigninBtn.addEventListener("click", () => {
 
 const signupOpen = document.querySelector(".js-signup");
 
-signupOpen.addEventListener("click", (evt) => {
-    const popUpModal = document.querySelector(".signupMenu");
-    openElement(popUpModal);
-})
+
+if (signupOpen) {
+    signupOpen.addEventListener("click", (evt) => {
+        const popUpModal = document.querySelector(".signupMenu");
+        openElement(popUpModal);
+    })
+}
 
 const signupClose = document.getElementById("signupClose");
 

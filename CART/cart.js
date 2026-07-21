@@ -9,17 +9,12 @@ let cartData = localStorage.getItem("cartItems");
 
 if (cartData === null || cartData === undefined) {
 
-    let itemMessage = `
-        <div class="item-list__message">
-            <h1>:(</h1>
-            <div class="message__text">
-                <h2>Ôi không!</h2>
-                <p>Bạn vẫn chưa thêm bất kỳ sản phẩm nào vào giỏ hàng!</p>
-            </div>
-        </div>
-    `;
+    itemList.replaceChildren();
 
-    itemList.innerHTML = itemMessage;
+    const template = document.getElementById("messageTemplate");
+    const message = template.content.cloneNode(true);
+
+    itemList.appendChild(message);
 
     const cartRight = document.querySelector(".cart__right");
     if (cartRight) {
@@ -39,32 +34,23 @@ if (cartData === null || cartData === undefined) {
     let cartItemArray = JSON.parse(cartData);
     console.log("Dữ liệu giỏ hàng đã được lấy thành công");
 
-    let itemCards = "";
+    itemList.replaceChildren();
+
     let total = 0;
+    const template = document.getElementById("itemTemplate");
 
+    cartItemArray.forEach((item) => {
 
-    cartItemArray.forEach((item, index) => {
+        const clone = template.content.cloneNode(true);
 
-        itemCards += `
-            <div class="cart__item">
-                <img class="item__img" src="${item.img}" alt="item's image">
-                <div class="item__info">
-                    <p class="item__id" style="display: none;">${item.id}</p>
-                    <h2 class="item__name">${item.name}</h2>
-                    <h2 class="item__price">${item.price}</h2>
-                    <div class="item__quantity">
-                        <p class="quantity__lable">Số lượng: </p>
-                        <button class="quantity__button" onclick="decreaseQuantity(this)" type="button">-</button>
-                        <p class="quantity__number">${item.quantity}</p>
-                        <button class="quantity__button" onclick="increaseQuantity(this)" type="button">+</button>
-                    </div>
-                    <button class="item__delete" onclick="deleteCartItem(this)" type="button">X</button>
-                </div>
-            </div>
-        `;
+        clone.querySelector(".item__id").textContent = item.id;
+        clone.querySelector(".item__img").src = item.img;
+        clone.querySelector(".item__name").textContent = item.name;
+        clone.querySelector(".item__price").textContent = item.price;
+        clone.querySelector(".item__quantity .quantity__number").textContent = item.quantity;
+
+        itemList.appendChild(clone);
     });
-
-    itemList.innerHTML = itemCards;
 
     updateTotalPrice();
 
@@ -82,8 +68,8 @@ function saveCartScroll() {
 }
 
 function updateTotalPrice() {
-    let cardData = localStorage.getItem("cartItems");
-    if (!cardData) return;
+    let cartData = localStorage.getItem("cartItems");
+    if (!cartData) return;
 
     let cartItemArray = JSON.parse(cartData);
 
@@ -96,7 +82,7 @@ function updateTotalPrice() {
 
     const subTotalElement = document.querySelector(".tempPrice");
     if (subTotalElement) {
-        subTotalElement.innerHTML = total.toLocaleString("vi-VN") + "vnđ";
+        subTotalElement.innerText = total.toLocaleString("vi-VN") + "vnđ";
     }
 
     let discount = 0;
@@ -112,7 +98,7 @@ function updateTotalPrice() {
 
     const totalElement = document.querySelector(".sumPrice");
     if (totalElement) {
-        totalElement.innerHTML = finalTotal.toLocaleString("vi-VN") + " vnđ";
+        totalElement.innerText = finalTotal.toLocaleString("vi-VN") + " vnđ";
     }
 }
 
@@ -137,7 +123,6 @@ function increaseQuantity(buttonClicked) {
     localStorage.setItem("cartItems", JSON.stringify(cartItemArray));
 
     updateTotalPrice();
-    location.reload();
 }
 
 function decreaseQuantity(buttonClicked) {
@@ -159,7 +144,6 @@ function decreaseQuantity(buttonClicked) {
         }
 
         updateTotalPrice();
-        location.reload();
     }
 }
 
@@ -287,7 +271,7 @@ checkoutSubmit.addEventListener("click", () => {
     if (allValid) {
         const checkoutMenu = document.getElementById("checkout")
         closeElement(checkoutMenu);
-        checkoutOpen.innerHTML = "Đã đặt hàng thành công";
+        checkoutOpen.innerText = "Đã đặt hàng thành công";
         checkoutOpen.classList.add("activated");
     }
 })
@@ -305,6 +289,7 @@ if (couponTextElement && sessionStorage.getItem("couponApplied") === "true") {
     if (!couponTextElement.classList.contains("approved")) {
         couponTextElement.classList.add("approved");
     }
+    couponTextElement.placeholder = "Đã áp dụng mã giảm giá!"
 }
 
 if (couponSubmitElement && couponTextElement) {
@@ -370,4 +355,3 @@ if (backToTopBtn) {
         });
     });
 }
-

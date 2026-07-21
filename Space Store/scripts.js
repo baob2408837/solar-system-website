@@ -16,6 +16,7 @@ Add2Cart.forEach((button) => {
         const linkClicked = evt.target;
         const productInfo = linkClicked.parentElement.parentElement;
 
+        let quantity = 0;
         let itemID = productInfo.querySelector(".product__id").textContent;
         let itemIMG = productInfo.querySelector("img").getAttribute("src");
         let itemName = productInfo.querySelector("h3").textContent;
@@ -40,13 +41,21 @@ Add2Cart.forEach((button) => {
             updatedCartItems.push(newItem);
         }
         localStorage.setItem("cartItems", JSON.stringify(updatedCartItems));
+
+        location.reload();
     })
 })
 
-function addToCart() {
-    const cartCount = document.getElementById('cart-count');
-    if (cartCount) {
-        let count = parseInt(cartCount.textContent);
-        cartCount.textContent = count + 1;
+const cartCount = document.getElementById('cart-count');
+
+(() => {
+
+    const updatedCartItems = JSON.parse(localStorage.getItem("cartItems"));
+    let quantity = 0;
+
+    for (let i = 0; i < updatedCartItems.length; i++) {
+        quantity += updatedCartItems[i].quantity;
     }
-}
+
+    cartCount.textContent = quantity;
+})();

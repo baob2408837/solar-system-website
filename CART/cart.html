@@ -157,6 +157,37 @@
     </div>
   </footer>
 
+  <!--Đây chỉ là template sẽ không được hiển thị của message trong item__list-->
+
+  <template id="messageTemplate">
+    <div class="item-list__message">
+      <h1>:(</h1>
+      <div class="message__text">
+        <h2>Ôi không!</h2>
+        <p>Bạn vẫn chưa thêm bất kỳ sản phẩm nào vào giỏ hàng!</p>
+      </div>
+    </div>
+  </template>
+
+  <!--Đây chỉ là template sẽ không được hiển thị của item trong item__list-->
+  <template id="itemTemplate">
+    <div class="cart__item">
+      <img class="item__img" src="#" alt="item's image">
+      <div class="item__info">
+        <p class="item__id" style="display: none;">item's id</p>
+        <h2 class="item__name">item's name</h2>
+        <h2 class="item__price">item's price</h2>
+        <div class="item__quantity">
+          <p class="quantity__lable">Số lượng: </p>
+          <button class="quantity__button" onclick="decreaseQuantity(this)" type="button">-</button>
+          <p class="quantity__number">item's quantity</p>
+          <button class="quantity__button" onclick="increaseQuantity(this)" type="button">+</button>
+        </div>
+        <button class="item__delete" onclick="deleteCartItem(this)" type="button">X</button>
+      </div>
+    </div>
+  </template>
+
   <!--=========================OVERLAY========================= -->
 
   <div class="overlay" id="overlay"></div>
@@ -189,7 +220,7 @@
           <input type="password" id="signinPassword" class="modal-input sign-in-input" placeholder="Nhập mật khẩu">
           <i class="fa-solid fa-eye-slash fa-fw" id="togglePassword"></i>
         </div>
-        <button id="signinSubmitButton">ĐĂNG NHẬP</button>
+        <button id="signinSubmitButton" type="button">ĐĂNG NHẬP</button>
       </div>
       <div class="modal-footer">
         <p class="divider-text">Hoặc đăng nhập bằng</p>
@@ -255,7 +286,7 @@
           <input type="checkbox" id="checkboxValue">
           <p>Tôi đồng ý với <a href="#">Điều khoản sử dụng</a> với <a href="#">Chính sách bảo mật</a></p>
         </div>
-        <button id="signupSubmitButton">Đăng ký</button>
+        <button id="signupSubmitButton" type="button">Đăng ký</button>
       </div>
       <div class="modal-footer">
         <p class="divider-text">Hoặc đăng nhập bằng</p>
@@ -322,7 +353,8 @@
         <div class="checkout__input">
           <div class="city">
             <label for="city"><i class="fa-solid fa-globe"></i> Quốc gia</label>
-            <input type="text" id="city" class="city__input checkoutInput" placeholder="Ví dụ:Việt Nam, Trung Quốc,...">
+            <input type="text" id="city" class="city__input checkoutInput"
+              placeholder="Ví dụ: Việt Nam, Trung Quốc,...">
           </div>
           <div class="address">
             <label for="address"><i class="fa-solid fa-house"></i> Địa chỉ</label>
