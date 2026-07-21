@@ -1,32 +1,213 @@
-/* =======================================================
-   GIANT PLANETS - Space Store
-   Trang giới thiệu các hành tinh đất đá
-   ======================================================= */
-
-/* ---------- 1. RESET CSS ----------
-   Đưa margin/padding về 0 và cho box-sizing: border-box
-   để khi set width/padding không bị cộng dồn kích thước */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+}
+/*================================
+               HEADER
+================================*/
+
+
+/*header {
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
-html {
-    scroll-behavior: smooth; /* Cuộn mượt khi bấm vào link # (VD: #overview) */
+.top-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  color: white;
+  background-color: #07152e;
+  width: 100%;
+  max-width: 100%;
+  align-self: center;
+  height: 30px;
+  font-size: 14px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: clamp(10px, 3vw, 30px);
+  padding-right: clamp(10px, 3vw, 30px);
+  box-sizing: border-box;
+  min-width: 0px;
+  overflow: hidden;
 }
 
+.top-bar p {
+  font-size: 13px;
+  font-weight: bold;
+  margin: 0;
+  width: max-content;
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 20px;
+}
+
+.top-links {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.top-links a {
+  padding: 0;
+  margin: 0;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+}
+
+.top-links a:hover {
+  color: var(--primary);
+}
+
+.top-links a:active {
+  color: rgb(32, 89, 146);
+}
+
+.navbar {
+  position: relative;
+  background: linear-gradient(180deg, #020611 0%, #071423 50%, #091f36 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 23px;
+  padding-bottom: 23px;
+  padding-left: clamp(10px, 1vw, 30px);
+  padding-right: clamp(10px, 1vw, 30px);
+  gap: 30px;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  gap: clamp(20px, 8vw, 100px);
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+
+}
+
+.logo i {
+  font-size: 45px;
+  color: #2563eb;
+  padding: 10px;
+}
+
+.fa-earth-asia {
+  color: #07152e;
+}
+
+.logo div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo div h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.logo div span {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: clamp(15px, 2vw, 40px);
+  padding: 0;
+  align-items: center;
+  width: auto;
+  max-width: none;
+  white-space: nowrap;
+}
+
+.menu a {
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+  position: relative;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: -12px;
+  width: calc(100% + 24px);
+  height: 3px;
+  background-color: var(--primary);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu a:hover {
+  color: var(--primary);
+}
+
+.menu a:hover::after {
+  transform: scaleX(1);
+}
+
+.menu a:active {
+  opacity: 0.8;
+}
+
+.navbar__mobile {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  width: 80px;
+  height: 70px;
+  font-size: 32px;
+  border: solid 1px transparent;
+  background-color: transparent;
+  color: var(--secondary);
+  transform: rotate(0deg);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar__mobile:hover {
+  background-color: var(--primary);
+  color: var(--text);
+}
+
+.navbar__mobile.pushed.pushed {
+  transform: rotate(-90deg) scale(0.8);
+} */
 body {
+    font-family: 'Poppins', sans-serif;
     background: linear-gradient(180deg, #020611 0%, #071423 50%, #091f36 100%);
     color: #fff;
     line-height: 1.8;
-    overflow-x: hidden; /* Chặn cuộn ngang do các hiệu ứng hover phóng to */
+    overflow-x: hidden;
 }
 
 img {
     width: 100%;
-    display: block; /* Ảnh mặc định là inline nên hay bị dư khoảng trắng bên dưới, display: block sẽ hết */
+    display: block;
 }
 
 a {
@@ -41,29 +222,22 @@ ul {
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto; /* Căn giữa khối nội dung theo chiều ngang */
+    margin: auto;
 }
 
-/* ---------- 2. BIẾN MÀU DÙNG CHUNG (CSS Variables) ----------
-   Khai báo 1 lần trong :root, chỗ nào cần thì gọi bằng var(--ten-bien) */
 :root {
     --primary: #4FA8FF;
+    --secondary: #0F2742;
     --card: #102742;
     --text: #FFFFFF;
     --gray: #BFC8D5;
-    --border: rgba(255, 255, 255, 0.08);
+    --border: rgba(255, 255, 255, .08);
+    --shadow: 0 20px 45px rgba(0, 0, 0, .35);
 }
 
-/* ---------- 3. NỀN SAO (STARS) ----------
-   Kỹ thuật: dùng background lặp lại (background-repeat) với radial-gradient
-   để tạo các chấm sao nhỏ. 3 lớp .stars khác kích thước tạo cảm giác có chiều sâu. */
-.stars {
-    background-image: radial-gradient(1px 1px, #ffffff 1px, transparent 0);
-    background-size: 150px 150px;
-    opacity: 0.5;
-}
-
-/* ---------- 4. SECTION & TIÊU ĐỀ DÙNG CHUNG ---------- */
+/* ===================================================
+   COMMON SECTIONS
+=================================================== */
 section {
     padding: 120px 0;
 }
@@ -82,144 +256,199 @@ section {
 }
 
 .section-title h2 {
-    font-size: 46px;
+    font-size: 52px;
     font-weight: 700;
+    position: relative;
     display: inline-block;
-    position: relative; /* Làm mốc để định vị gạch chân ở dưới bằng ::after */
 }
 
-/* ::after là kỹ thuật pseudo-element, tạo ra 1 "phần tử ảo"
-   để vẽ thêm gạch chân trang trí mà không cần thêm thẻ HTML */
 .section-title h2::after {
     content: "";
-    display: block;
     width: 70px;
     height: 4px;
     background: var(--primary);
-    border-radius: 30px;
+    display: block;
     margin: 18px auto 0;
+    border-radius: 30px;
 }
 
-/* ---------- 5. HERO (banner đầu trang) ----------
-   Kỹ thuật: Flexbox để căn giữa nội dung theo chiều dọc */
+.section-tag {
+    color: #4faeff;
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* ===================================================
+   HERO COMPONENT
+=================================================== */
 .hero {
-    position: relative; /* Làm mốc cho lớp phủ .hero-overlay */
+    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url("images/hero-bg.jpg") center center / cover no-repeat;
+    background: url("images/hinhnen.jpg") center center/cover no-repeat;
     overflow: hidden;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg,
-        rgba(4, 10, 22, 0.95) 10%,
-        rgba(4, 10, 22, 0.75) 35%,
-        rgba(4, 10, 22, 0.45) 60%,
-        rgba(4, 10, 22, 0.15) 100%);
+    background: linear-gradient(90deg, rgba(4,10,22,.95) 10%, rgba(4,10,22,.75) 35%, rgba(4,10,22,.45) 60%, rgba(4,10,22,.15) 100%);
 }
 
 .hero-container {
     width: 90%;
     max-width: 1300px;
-    margin: 0 auto;
+    margin: auto;
     position: relative;
-    z-index: 2; /* Đẩy nội dung lên trên lớp overlay */
+    z-index: 2;
 }
 
 .hero-content {
-    max-width: 720px;
-}
-
-.hero-tag {
-    color: var(--primary);
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    font-size: 15px;
-    margin-bottom: 20px;
+    width: 720px;
 }
 
 .hero h1 {
-    font-size: 80px;
+    font-size: 90px;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1;
+    color: white;
     margin-bottom: 30px;
+}
+
+.hero-tag {
+    color: #4ba6ff;
+    letter-spacing: 5px;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
 }
 
 .hero-description {
     color: #d4dbe7;
-    font-size: 20px;
-    margin-bottom: 40px;
+    font-size: 22px;
+    line-height: 1.8;
+    margin-bottom: 45px;
 }
 
+/* Định dạng hover nút khám phá bằng CSS thuần */
 .hero-btn {
     display: inline-block;
     padding: 18px 42px;
     background: #2f89ff;
-    border-radius: 50px; /* Bo tròn hết cỡ -> tạo dạng nút "viên thuốc" (pill button) */
-    color: #fff;
+    border-radius: 50px;
+    color: white;
+    font-size: 18px;
     font-weight: 600;
-    transition: 0.3s; /* Hiệu ứng chuyển màu/di chuyển mượt khi hover */
+    transition: .35s;
 }
 
 .hero-btn:hover {
     background: #54a8ff;
-    transform: translateY(-4px); /* Nhích nút lên trên khi rê chuột vào */
+    transform: translateY(-4px);
 }
 
 .hero-stats {
-    display: flex; /* Xếp các ô số liệu nằm ngang */
-    gap: 60px;
-    margin-top: 60px;
+    display: flex;
+    gap: 90px;
+    margin-top: 70px;
 }
 
 .stat h2 {
-    color: var(--primary);
-    font-size: 56px;
-    margin-bottom: 8px;
+    color: #3c97ff;
+    font-size: 72px;
+    margin-bottom: 10px;
 }
 
 .stat span {
-    font-size: 18px;
+    color: white;
+    font-size: 20px;
 }
 
-/* ---------- 6. QUICK NAV (điều hướng nhanh 4 hành tinh) ----------
-   Kỹ thuật: Grid layout, chia đều 4 cột bằng nhau */
+/* ĐỊNH DẠNG NÚT BACK TO TOP (Mới thêm vào CSS để hiển thị siêu đẹp) */
+#topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(79, 168, 255, 0.4);
+    
+    /* Hiệu ứng ẩn hiện mượt mà bằng CSS transition */
+   opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* Class do JS thêm vào khi cuộn xuống */
+#topBtn.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hiệu ứng di chuột vào nút Back to top */
+#topBtn:hover {
+    background-color: #61bcff;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(79, 168, 255, 0.6);
+}
+
+/* ===================================================
+   QUICK NAVIGATION
+=================================================== */
+.quick-nav {
+    padding: 80px 0;
+}
+
 .quick-nav-grid {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
 
 .quick-card {
-    background: rgba(255, 255, 255, 0.05); /* Nền trắng mờ -> tạo hiệu ứng kính (glassmorphism) */
-    border: 1px solid var(--border);
-    border-radius: 20px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    backdrop-filter: blur(12px);
+    border-radius: 22px;
     padding: 35px 25px;
     text-align: center;
-    transition: 0.3s;
+    transition: .35s ease;
 }
 
 .quick-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
     border-color: var(--primary);
+    box-shadow: 0 20px 35px rgba(79,168,255,.18);
 }
 
 .quick-card img {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 20px;
-    object-fit: contain; /* Giữ nguyên tỉ lệ ảnh, không bị kéo méo */
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    margin-bottom: 20px;
+    object-fit: contain;
 }
 
 .quick-card h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 12px;
 }
 
 .quick-card p {
@@ -227,81 +456,151 @@ section {
     font-size: 15px;
 }
 
-/* ---------- 7. INTRO (giới thiệu chung) ----------
-   Kỹ thuật: Grid layout cho 4 thẻ đặc điểm */
+/* ===================================================
+   INTRO & OVERVIEW
+=================================================== */
 .intro {
+    padding: 120px 0;
     background: #08111f;
 }
 
 .intro-title {
-    max-width: 800px;
-    margin: 0 auto;
+    width: 850px;
+    margin: auto;
     text-align: center;
 }
 
-.section-tag {
-    color: var(--primary);
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
 .intro-title h2 {
-    font-size: 46px;
-    margin-bottom: 20px;
+    font-size: 55px;
+    color: white;
+    margin: 20px 0;
 }
 
 .intro-title p {
-    color: var(--gray);
-    font-size: 18px;
+    color: #bcc8d8;
+    line-height: 1.9;
+    font-size: 19px;
 }
 
 .overview-grid {
     width: 90%;
-    max-width: 1300px;
-    margin: 60px auto 0;
+    max-width: 1400px;
+    margin: 70px auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 35px;
+}
+
+.overview-card {
+    background: none;
+    border: none;
+    padding: 0;
+    transition: .35s;
 }
 
 .overview-card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover; /* Cắt ảnh vừa khung mà không bị méo */
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-.overview-card:hover img {
-    transform: scale(1.05); /* Phóng to nhẹ ảnh khi hover */
+    height: 240px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: .4s;
 }
 
 .overview-card h3 {
-    margin-top: 20px;
-    font-size: 26px;
+    margin-top: 22px;
+    color: white;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
 .overview-card p {
-    margin-top: 12px;
-    color: var(--gray);
+    margin-top: 18px;
+    color: #c7cedd;
+    font-size: 20px;
+    line-height: 1.7;
 }
 
-/* ---------- 8. PLANET SECTION (chi tiết từng hành tinh) ----------
-   Kỹ thuật: Flexbox, chữ 1 bên - ảnh 1 bên, xen kẽ trái/phải */
+.overview-card:hover {
+    transform: translateY(-8px);
+}
+
+.overview-card:hover img {
+    transform: scale(1.03);
+}
+
+/* ===================================================
+   PLANET SECTIONS & NEW SIMPLE TEXT STATS
+=================================================== */
+.planet-section {
+    padding: 140px 0;
+    position: relative;
+}
+
+.planet-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,.15), transparent);
+}
+.planet-section{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 8%;
+
+    opacity: 1;
+    transform: translateY(50px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.planet-section.show{
+    opacity: 1;
+    transform: translateY(0);
+}
 .planet-container {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 60px;
+    gap: 80px;
 }
 
 .planet-content {
-    flex: 1; /* 2 khối chữ + ảnh chia đều không gian còn lại */
+    flex: 1;
+}
+
+.planet-content h2 {
+    font-size: 52px;
+    margin-bottom: 18px;
+    position: relative;
+}
+
+.planet-content h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: var(--primary);
+    display: block;
+    margin-top: 12px;
+    border-radius: 10px;
+}
+
+.planet-subtitle {
+    color: var(--primary);
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.planet-content p {
+    color: var(--gray);
+    text-align: justify;
 }
 
 .planet-number {
@@ -309,45 +608,9 @@ section {
     color: var(--primary);
     border: 1px solid var(--primary);
     border-radius: 30px;
-    padding: 6px 16px;
-    margin-bottom: 20px;
+    padding: 8px 18px;
+    margin-bottom: 25px;
     font-weight: 600;
-}
-
-.planet-content h2 {
-    font-size: 46px;
-    margin-bottom: 12px;
-}
-
-.planet-subtitle {
-    color: var(--primary);
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.planet-content p {
-    color: var(--gray);
-}
-
-/* Grid 2x2 hiển thị các thông số của hành tinh */
-.planet-info {
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.info-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 18px;
-}
-
-.info-card h3 {
-    color: var(--primary);
-    font-size: 15px;
-    margin-bottom: 8px;
 }
 
 .planet-image {
@@ -356,12 +619,18 @@ section {
     justify-content: center;
 }
 
-/* Ảnh hành tinh chính, có hiệu ứng tự xoay nhẹ + phát sáng xung quanh */
 .planet-main {
     width: 100%;
-    max-width: 380px;
-    filter: drop-shadow(0 0 25px rgba(79, 168, 255, 0.35));
-    animation: spinPlanet 40s linear infinite; /* Xoay đều, mỗi vòng 40 giây, lặp vô hạn */
+    max-width: 480px;
+    animation: spinPlanet 40s linear infinite;
+    transform-origin: center;
+    filter: drop-shadow(0 0 25px rgba(79,168,255,.35));
+    transition: .5s ease;
+}
+
+.planet-main:hover {
+    transform: scale(1.08) rotate(2deg);
+    filter: drop-shadow(0 0 15px #4fa8ff) drop-shadow(0 0 35px #4fa8ff) drop-shadow(0 0 55px #2f82ff);
 }
 
 @keyframes spinPlanet {
@@ -369,18 +638,23 @@ section {
     to { transform: rotate(360deg); }
 }
 
-/* Nền màu riêng cho từng hành tinh theo id, gợi liên tưởng màu thật */
-#saothuy { background: linear-gradient(to right, rgba(170, 170, 180, 0.15), transparent); }
-#saokim  { background: linear-gradient(to left, rgba(255, 196, 94, 0.15), transparent); }
-#traidat { background: linear-gradient(to right, rgba(64, 181, 255, 0.15), transparent); }
-#saohoa  { background: linear-gradient(to left, rgba(255, 98, 74, 0.15), transparent); }
+#saothuy { background: linear-gradient(to right, rgba(182,122,56,.12), transparent); }
+#saokim { background: linear-gradient(to left, rgba(232,203,137,.10), transparent); }
+#traidat { background: linear-gradient(to right, rgba(123,230,255,.10), transparent); }
+#saohoa { background: linear-gradient(to left, rgba(45,110,255,.12), transparent); }
 
-/* ---------- 9. TIMELINE (dòng thời gian khám phá) ----------
-   Kỹ thuật: Grid layout 4 cột + đường kẻ ngang nối các mốc bằng ::before */
+/* ===================================================
+   TIMELINE
+=================================================== */
+.timeline {
+    position: relative;
+    padding: 140px 0;
+}
+
 .timeline-container {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
@@ -390,209 +664,195 @@ section {
 .timeline-container::before {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 42px;
     left: 8%;
     width: 84%;
-    height: 2px;
-    background: rgba(79, 168, 255, 0.25);
-    z-index: 0; /* Nằm phía sau các mốc thời gian */
+    height: 3px;
+    background: rgba(79,168,255,.25);
+    z-index: 0;
 }
 
 .timeline-item {
     position: relative;
     text-align: center;
-    z-index: 1;
+    z-index: 2;
+    transition: .35s ease;
 }
 
-.timeline-item span {
-    color: var(--primary);
-    font-weight: 600;
+.timeline-item:hover {
+    transform: translateY(-10px);
 }
 
 .timeline-item h3 {
-    margin: 10px 0;
+    margin-bottom: 15px;
 }
 
 .timeline-item p {
     color: var(--gray);
-    font-size: 15px;
 }
 
-/* ---------- 10. COMPARISON TABLE (bảng so sánh) ---------- */
+/* ===================================================
+   COMPARISON TABLE
+=================================================== */
+.comparison {
+    padding: 140px 0;
+}
+
 .comparison-table {
     width: 100%;
-    border-collapse: collapse; /* Gộp viền các ô lại với nhau, không bị tách đôi */
-    border-radius: 16px;
-    overflow: hidden; /* Giúp bo góc border-radius áp dụng được cho cả bảng */
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
 }
 
 .comparison-table thead {
     background: #1b66d8;
 }
 
-.comparison-table th,
+.comparison-table th {
+    padding: 22px;
+    font-size: 18px;
+}
+
 .comparison-table td {
-    padding: 18px;
+    padding: 20px;
     text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
 .comparison-table tbody tr {
-    background: var(--card);
+    background: #102742;
+    transition: .3s;
 }
 
 .comparison-table tbody tr:nth-child(even) {
-    background: #132d4a; /* Kẻ sọc xen kẽ (zebra stripe) cho dễ đọc */
+    background: #132d4a;
 }
 
 .comparison-table tbody tr:hover {
     background: #19406b;
 }
 
-/* ---------- 11. FUN FACTS ----------
-   Kỹ thuật: Grid layout 4 cột */
+/* ===================================================
+   FUN FACTS & GALLERY
+=================================================== */
+.fun-facts {
+    padding: 140px 0;
+}
+
 .facts-grid {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
 
 .fact-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 35px 25px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 40px 30px;
     text-align: center;
-    transition: 0.3s;
+    transition: .35s ease;
 }
 
 .fact-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
     border-color: var(--primary);
+    box-shadow: 0 20px 35px rgba(79,168,255,.18);
 }
 
 .fact-card i {
-    font-size: 40px; /* Icon từ thư viện Font Awesome */
+    font-size: 46px;
     color: var(--primary);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .fact-card h3 {
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
 .fact-card p {
     color: var(--gray);
-    font-size: 15px;
 }
 
-/* ---------- 12. GALLERY (thư viện ảnh) ----------
-   Kỹ thuật: Grid 2 cột + chú thích đè lên ảnh bằng position: absolute */
+.gallery {
+    padding: 140px 0;
+}
+
 .gallery-grid {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    gap: 35px;
 }
 
 .gallery-item {
-    position: relative; /* Làm mốc cho phần chú thích .gallery-caption */
-    overflow: hidden; /* Cắt bớt phần ảnh phóng to tràn ra ngoài khi hover */
-    border-radius: 18px;
+    overflow: hidden;
+    border-radius: 22px;
+    position: relative;
 }
 
 .gallery-item img {
-    height: 300px;
+    width: 100%;
+    height: 330px;
     object-fit: cover;
-    transition: 0.4s;
+    transition: .5s;
 }
 
 .gallery-item:hover img {
-    transform: scale(1.08); /* Phóng to ảnh khi hover */
+    transform: scale(1.08);
 }
 
-/* Lớp phủ tối dần phía dưới ảnh để chữ chú thích dễ đọc hơn */
 .gallery-item::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+    background: linear-gradient(transparent, rgba(0,0,0,.45));
 }
 
 .gallery-caption {
     position: absolute;
-    left: 20px;
-    bottom: 20px;
-    z-index: 1; /* Nổi lên trên lớp phủ tối */
+    left: 25px;
+    bottom: 25px;
+    z-index: 5;
+}
+
+.gallery-caption h3 {
+    font-size: 28px;
 }
 
 .gallery-caption p {
     color: #ddd;
-    font-size: 14px;
 }
 
-/* ---------- 13. CTA (kêu gọi hành động) ---------- */
-.cta {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-    background: linear-gradient(45deg, #0f2742, #194c8b);
-    border-radius: 20px;
-    padding: 60px;
-    text-align: center;
-}
 
-.cta h2 {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
-.cta p {
-    color: #d7e0eb;
-    margin-bottom: 35px;
-}
-
-.cta a,
-.back-home {
-    display: inline-block;
-    padding: 16px 40px;
-    border-radius: 50px;
-    background: #fff;
-    color: #0d2440;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.cta a:hover,
-.back-home:hover {
-    transform: translateY(-4px);
-}
-
-/* ---------- 14. FOOTER ----------
-   Kỹ thuật: Grid layout, cột logo rộng gấp đôi 2 cột link */
-.footer {
+/* FOOTER */
+footer {
     margin-top: 100px;
     background: #050d18;
-    border-top: 1px solid var(--border);
+    border-top: 1px solid rgba(255,255,255,.08);
 }
 
 .footer-container {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 0;
+    margin: auto;
+    padding: 70px 0;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    gap: 50px;
+    gap: 60px;
 }
 
 .footer-logo h2 {
-    font-size: 28px;
-    margin-bottom: 15px;
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
 .footer-logo span {
@@ -604,118 +864,75 @@ section {
 }
 
 .footer-links h3 {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
-.footer-links li {
-    margin-bottom: 10px;
+.footer-links ul li {
+    margin-bottom: 12px;
 }
 
 .footer-links a {
     color: var(--gray);
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .footer-links a:hover {
-    color: #fff;
-    padding-left: 6px; /* Link nhích sang phải nhẹ khi hover */
+    color: white;
+    padding-left: 8px;
 }
 
 .footer-bottom {
-    border-top: 1px solid var(--border);
-    padding: 20px;
+    border-top: 1px solid rgba(255,255,255,.08);
+    padding: 25px;
     text-align: center;
     color: #9faec2;
-    font-size: 14px;
 }
 
-/* ---------- 15. RESPONSIVE (giao diện co giãn theo màn hình) ----------
-   Kỹ thuật: Media Query, thay đổi số cột của Grid theo độ rộng màn hình */
+/* ===================================================
+   SCROLLBAR & SELECTION
+=================================================== */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #071423; }
+::-webkit-scrollbar-thumb { background: #2f82ff; border-radius: 20px; }
+::-webkit-scrollbar-thumb:hover { background: #61bcff; }
+::selection { background: #4fa8ff; color: white; }
 
-/* Máy tính bảng: màn hình <= 992px */
-@media (max-width: 992px) {
-    .planet-container {
-        flex-direction: column; /* Chữ và ảnh xếp chồng lên nhau thay vì nằm ngang */
+/* ===================================================
+   RESPONSIVE LAYOUT SYSTEM (Đã sửa lỗi dư dấu đóng ngoặc ở cuối)
+=================================================== */
+@media(max-width: 1200px) {
+    .overview-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media(max-width: 992px) {
+    .hero-container {
+        display: flex;
+        flex-direction: column-reverse;
         text-align: center;
     }
-
-    .quick-nav-grid,
-    .timeline-container,
-    .facts-grid,
-    .overview-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .hero-content {
+        max-width: 100%;
+        margin: 0 auto;
     }
-
-    .gallery-grid,
-    .footer-container {
-        grid-template-columns: 1fr;
-    }
+    .hero h1 { font-size: 48px; }
+    .hero-stats { justify-content: center; }
+    .planet-container { flex-direction: column !important; }
+    .quick-nav-grid, .timeline-container, .facts-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-grid, .footer-container { grid-template-columns: 1fr; }
 }
 
-/* Điện thoại: màn hình <= 768px */
-@media (max-width: 768px) {
-    section {
-        padding: 80px 0;
-    }
-
-    .hero h1 {
-        font-size: 42px;
-    }
-
-    .hero-stats {
-        gap: 30px;
-    }
-
-    .hero-description {
-        font-size: 16px;
-    }
-
-    .section-title h2,
-    .intro-title h2 {
-        font-size: 32px;
-    }
-
-    .planet-content h2 {
-        font-size: 34px;
-    }
-
-    .planet-info,
-    .quick-nav-grid,
-    .timeline-container,
-    .facts-grid,
-    .overview-grid {
-        grid-template-columns: 1fr; /* Về 1 cột trên màn hình nhỏ */
-    }
-
-    .timeline-container::before {
-        display: none; /* Ẩn đường kẻ nối trên mobile cho gọn */
-    }
-
-    .comparison-table {
-        display: block;
-        overflow-x: auto; /* Cho phép cuộn ngang bảng khi màn hình quá hẹp */
-    }
-
-    .cta {
-        padding: 40px 20px;
-    }
-}
-
-/* ---------- 16. THANH CUỘN & VÙNG BÔI ĐEN ---------- */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #071423;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #2f82ff;
-    border-radius: 20px;
-}
-
-::selection {
-    background: var(--primary);
-    color: #fff;
+@media(max-width: 768px) {
+    section { padding: 90px 0; }
+    .hero h1 { font-size: 38px; }
+    .hero-stats { gap: 30px; }
+    .hero-description { font-size: 17px; }
+    .section-title h2 { font-size: 36px; }
+    .planet-content h2 { font-size: 38px; }
+    .planet-text-stats { flex-direction: column; gap: 30px; }
+    .overview-grid, .quick-nav-grid, .timeline-container, .facts-grid { grid-template-columns: 1fr; }
+    .timeline-container::before { display: none; }
+    .comparison-table { display: block; overflow-x: auto; }
+    .cta { padding: 45px 25px; }
+    .cta h2 { font-size: 34px; }
+    .footer { text-align: center; }
 }
