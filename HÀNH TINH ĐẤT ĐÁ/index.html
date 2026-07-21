@@ -5,73 +5,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hành tinh đất đá</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <!-- Google Fonts: Poppins (chữ thường) và Space Grotesk (tiêu đề) -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="chung.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome: thư viện icon (mạng xã hội, đồng hồ, mặt trăng...) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
-
-    <!-- File CSS riêng của trang -->
-    <link rel="stylesheet" href="giant.css">
 </head>
 
 <body>
-
-    <!-- Nền sao trang trí, cố định phía sau nội dung -->
-    <div class="stars"></div>
-
-    <!-- ============ HERO (banner đầu trang) ============ -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-
-        <div class="hero-container">
-            <div class="hero-content">
-                <p class="hero-tag">KHÁM PHÁ HỆ MẶT TRỜI</p>
-
-                <h1>
-                    Hành tinh
-                    <br>
-                    Đất đá
-                </h1>
-
-                <p class="hero-description">
-                    Chào mừng bạn đến với Khám phá những hành tinh đất đá – nơi đưa bạn tìm hiểu các hành tinh có bề mặt rắn trong Hệ Mặt Trời.
-                    Tại đây, bạn sẽ khám phá đặc điểm, cấu tạo và những điều thú vị xoay quanh các thế giới đá đầy bí ẩn,
-                    góp phần mở rộng hiểu biết về vũ trụ và Trái Đất của chúng ta.
-                </p>
-
-                <a href="#overview" class="hero-btn">Khám phá ngay →</a>
-
-                <!-- Flexbox: 3 ô số liệu xếp ngang hàng -->
-                <div class="hero-stats">
-                    <div class="stat">
-                        <h2>04</h2>
-                        <span>Hành tinh</span>
-                    </div>
-                    <div class="stat">
-                        <h2>3</h2>
-                        <span>Vệ tinh</span>
-                    </div>
-                    <div class="stat">
-                        <h2>0</h2>
-                        <span>Hệ vành đai</span>
-                    </div>
-                </div>
-            </div>
+    <header>
+    <div class="top-bar">
+      <p>🚀 Chào mừng bạn đến với Planet Journey!</p>
+      <div class="top-links">
+        <div class="top-bar__login">
+          <a href="#" class="js-login">
+            <i class="fa-regular fa-user"></i>
+            Đăng nhập
+          </a>
+          <span>/</span>
+          <a href="#" class="js-signup">
+            Đăng ký
+          </a>
         </div>
-    </section>
+        <a href="/CART/cart.html">
+          <i class="fa-solid fa-cart-shopping"></i>
+          Giỏ hàng
+        </a>
+      </div>
+    </div>
 
-    <!-- ============ QUICK NAV: 4 thẻ đi nhanh tới từng hành tinh ============ -->
-    <!-- Grid layout: chia đều 4 cột -->
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-earth-asia"></i>
+        <div>
+          <h1>Planet Journey</h1>
+          <span>Khám phá vũ trụ trong tầm tay</span>
+        </div>
+      </div>
+
+      <ul class="menu">
+        <li><a href="/home-page/space-store/index.html">Trang chủ</a></li>
+        <li><a href="/HÀNH TINH ĐẤT ĐÁ/index.html">Hành tinh Đất đá</a></li>
+        <li><a href="/GIANT-PLANETS/giant-planets.html">Hành tinh Khí khổng lồ</a></li>
+        <li><a href="/Space Store/index.html">Space Store</a></li>
+        <li><a href="/CART/cart.html">Giỏ hàng</a></li>
+      </ul>
+
+      <button class="navbar__mobile" type="button"><i class="fa-solid fa-bars"></i></button>
+
+    </nav>
+  </header>
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-container">
+
+        <div class="hero-content">
+
+            <p class="hero-tag">
+                KHÁM PHÁ HỆ MẶT TRỜI
+            </p>
+
+            <h1>
+                Hành tinh 
+                 <br>
+                Đất đá
+            </h1>
+
+            <p class="hero-description">
+                Chào mừng bạn đến với Khám phá những hành tinh đất đá – nơi đưa bạn tìm hiểu các hành tinh có bề mặt rắn trong Hệ Mặt Trời.
+                Tại đây, bạn sẽ khám phá đặc điểm, cấu tạo và những điều thú vị xoay quanh các thế giới đá đầy bí ẩn, 
+                góp phần mở rộng hiểu biết về vũ trụ và Trái Đất của chúng ta.
+            </p>
+
+            <a href="#overview" class="hero-btn">
+                Khám phá ngay
+            </a>
+
+            <div class="hero-stats">
+
+                <div class="stat">
+                    <h2>04</h2>
+                    <span>Hành tinh</span>
+                </div>
+
+                <div class="stat">
+                    <h2>3</h2>
+                    <span>Vệ tinh</span>
+                </div>
+
+                <div class="stat">
+                    <h2>0</h2>
+                    <span>Hệ vành đai</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<button id="topBtn" title="Về đầu trang"><i class="fa-solid fa-arrow-up"></i></button>
     <section class="quick-nav">
         <div class="quick-nav-grid">
             <a href="#saothuy" class="quick-card">
                 <img src="images/saothuy.png" alt="Sao Thủy">
                 <h3>Sao Thủy</h3>
-                <p>Sự chênh lệch khủng khiếp về nhiệt độ giữa ngày và đêm</p>
+                <p>Sự chênh lệch khủng kiếp về nhiệt độ giữa ngày và đêm</p>
             </a>
             <a href="#saokim" class="quick-card">
                 <img src="images/saokim.png" alt="Sao Kim">
@@ -84,66 +134,76 @@
                 <p>Hành tinh xanh của sự sống</p>
             </a>
             <a href="#saohoa" class="quick-card">
-                <img src="images/saohoa.png" alt="Sao Hỏa">
+                <img src="images/saohoa.png" alt="Sao Hỏa ">
                 <h3>Sao Hỏa</h3>
                 <p>Hành tinh sắc đỏ độc nhất</p>
             </a>
         </div>
     </section>
-
-    <!-- ============ INTRO: giới thiệu chung + 4 đặc điểm ============ -->
+    
     <section class="intro" id="overview">
         <div class="intro-title">
             <p class="section-tag">GIỚI THIỆU</p>
             <h2>Hành tinh đất đá là gì?</h2>
             <p>
-                Hành tinh đất đá là nhóm các hành tinh có bề mặt rắn chắc được cấu tạo chủ yếu từ đá silicat hoặc kim loại.
+                Hành tinh đất đá là nhóm các hành tinh có bề mặt rắn chắc được cấu tạo chủ yếu từ đá silicat hoặc kim loại. 
                 Khác với các hành tinh khí khổng lồ, nhóm hành tinh này có mật độ vật chất cao, lõi kim loại đặc và sở hữu các địa hình đặc trưng như hẻm núi,
                 núi lửa hay hố thiên thạch.
             </p>
         </div>
+    <div class="overview-grid">
+        <div class="overview-card">
 
-        <!-- Grid layout: 4 thẻ đặc điểm -->
-        <div class="overview-grid">
-            <div class="overview-card">
-                <img src="images/itvetinh.png" alt="Ít vệ tinh">
-                <h3>Ít vệ tinh tự nhiên</h3>
-                <p>
-                    Nhóm hành tinh này có rất ít hoặc không có vệ tinh quay quanh (Sao Thủy và Sao Kim không có, Trái Đất có 1, Sao Hỏa có 2)
-                    và hoàn toàn không có hệ vành đai.
-                </p>
-            </div>
+            <img src="images/itvetinh.png" alt="itvetinh">
 
-            <div class="overview-card">
-                <img src="images/ranchac.png" alt="Bề mặt rắn chắc">
-                <h3>Bề mặt rắn chắc</h3>
-                <p>
-                    Các hành tinh này đều có bề mặt cố định bằng đá silicat và địa hình hiểm trở như núi lửa,
-                    hẻm núi, hố thiên thạch, cho phép đáp tàu vũ trụ lên được.
-                </p>
-            </div>
+            <h3>Ít vệ tinh tự nhiên</h3>
 
-            <div class="overview-card">
-                <img src="images/phanlop.png" alt="Cấu trúc phân lớp">
-                <h3>Cấu trúc phân lớp</h3>
-                <p>
-                    Tất cả đều có cấu tạo tương đồng từ trong ra ngoài: một lõi kim loại bằng sắt ở trung tâm,
-                    bao bọc bởi lớp manti đá và một lớp vỏ mỏng ngoài cùng.
-                </p>
-            </div>
+            <p>
+                Nhóm hành tinh này có rất ít hoặc không có vệ tinh quay quanh (Sao Thủy và Sao Kim không có, Trái Đất có 1, Sao Hỏa có 2)
+                 và hoàn toàn không có hệ vành đai.
+            </p>
 
-            <div class="overview-card">
-                <img src="images/nhobe.png" alt="Kích thước nhỏ gọn">
-                <h3>Kích thước nhỏ gọn</h3>
-                <p>
-                    So với các hành tinh khí khổng lồ, nhóm hành tinh đất đá có kích thước và khối lượng nhỏ hơn nhiều, nhưng lại có mật độ vật chất (khối lượng riêng) cao hơn.
-                </p>
+        </div>
+
+        <div class="overview-card">
+
+            <img src="images/ranchac.png" alt="ranchac">
+
+            <h3>Bề mặt rắn chắc</h3>
+
+            <p>
+                Các hành tinh này đều có bề mặt cố định bằng đá silicat và địa hình hiểm trở như núi lửa,
+                 hẻm núi, hố thiên thạch, cho phép đáp tàu vũ trụ lên được.
+            </p>
+
+        </div>
+
+        <div class="overview-card">
+
+            <img src="images/phanlop.png" alt="phanlop">
+
+            <h3>Cấu trúc phân lớp</h3>
+
+            <p>
+                Tất cả đều có cấu tạo tương đồng từ trong ra ngoài: một lõi kim loại bằng sắt ở trung tâm,
+                 bao bọc bởi lớp manti đá và một lớp vỏ mỏng ngoài cùng.
+            </p>
+
+        </div>
+
+        <div class="overview-card">
+
+            <img src="images/nhobe.png" alt="kichthuocnho">
+
+            <h3>Kích thước nhỏ gọn</h3>
+
+            <p>
+                So với các hành tinh khí khổng lồ, nhóm hành tinh đất đá có kích thước và khối lượng nhỏ hơn nhiều, nhưng lại có mật độ vật chất (khối lượng riêng) cao hơn.
+            </p>
             </div>
         </div>
+    <div>
     </section>
-
-    <!-- ============ CHI TIẾT TỪNG HÀNH TINH ============ -->
-    <!-- Mỗi hành tinh dùng Flexbox: 1 bên chữ - 1 bên ảnh -->
 
     <section class="planet-section" id="saothuy">
         <div class="planet-container">
@@ -153,7 +213,7 @@
                 <p class="planet-subtitle">Hành tinh của những thái cực nhiệt độ</p>
                 <p>
                     Do ở gần Mặt Trời nhất nhưng lại gần như không có bầu khí quyển để giữ nhiệt hay điều hòa nhiệt độ,
-                    ban ngày ở Sao Thủy có thể nóng lên tới 430°C, nhưng ban đêm lại tụt dốc thê thảm xuống -180°C.
+                     ban ngày ở Sao Thủy có thể nóng lên tới 430°C, nhưng ban đêm lại tụt dốc thê thảm xuống -180°C.
                 </p>
                 <div class="planet-info">
                     <div class="info-card">
@@ -180,7 +240,6 @@
         </div>
     </section>
 
-    <!-- Hành tinh này đảo vị trí: ảnh bên trái, chữ bên phải -->
     <section class="planet-section" id="saokim">
         <div class="planet-container">
             <div class="planet-image">
@@ -191,9 +250,9 @@
                 <h2>Sao Kim</h2>
                 <p class="planet-subtitle">Lò thiêu của Hệ Mặt Trời</p>
                 <p>
-                    Dù không gần Mặt Trời bằng Sao Thủy, nhưng Sao Kim sở hữu bầu khí quyển dày đặc khí nhà kính (CO2).
-                    Điều này tạo ra một hiệu ứng nhà kính mất kiểm soát,
-                    giữ nhiệt độ bề mặt luôn ở mức khoảng 460°C (đủ sức nung chảy chì) cả ngày lẫn đêm.
+                    Dù không gần Mặt Trời bằng Sao Thủy, nhưng Sao Kim sở hữu bầu khí quyển dày đặc khí nhà kính ($CO_2$).
+                     Điều này tạo ra một hiệu ứng nhà kính mất kiểm soát,
+                      giữ nhiệt độ bề mặt luôn ở mức khoảng 460°C (đủ sức nung chảy chì) cả ngày lẫn đêm.
                 </p>
                 <div class="planet-info">
                     <div class="info-card">
@@ -225,8 +284,8 @@
                 <p class="planet-subtitle">Hành tinh của sự sống nơi có nước ở thể lỏng</p>
                 <p>
                     Trái Đất nằm trong "vùng ở được" (Goldilocks zone),
-                    sở hữu bầu khí quyển hoàn hảo và lượng nước lỏng dồi dào chiếm 71% bề mặt,
-                    tạo điều kiện cho hàng triệu loài sinh vật sinh sôi, phát triển.
+                     sở hữu bầu khí quyển hoàn hảo và lượng nước lỏng dồi dào chiếm 71% bề mặt,
+                     tạo điều kiện cho hàng triệu loài sinh vật sinh sôi, phát triển.
                 </p>
                 <div class="planet-info">
                     <div class="info-card">
@@ -235,7 +294,7 @@
                     </div>
                     <div class="info-card">
                         <h3>Vệ tinh</h3>
-                        <p>1 - Mặt Trăng</p>
+                        <p> 1 - Mặt Trăng</p>
                     </div>
                     <div class="info-card">
                         <h3>Chu kỳ quay</h3>
@@ -263,9 +322,9 @@
                 <h2>Sao Hỏa</h2>
                 <p class="planet-subtitle">Hành tinh Đỏ</p>
                 <p>
-                    Toàn bộ bề mặt Sao Hỏa được bao phủ bởi một lớp bụi giàu sắt oxit,
+                    Toàn bộ bề mặt Sao Hỏa được bao phủ bởi một lớp bụi giàu sắt oxit, 
                     khiến nó hiện lên bầu trời như một đốm lửa đỏ rực.
-                    Đây cũng là nơi có ngọn núi lửa Olympus Mons cao nhất Hệ Mặt Trời (gấp 3 lần núi Everest).
+                     Đây cũng là nơi có ngọn núi lửa Olympus Mons cao nhất Hệ Mặt Trời (gấp 3 lần núi Everest).
                 </p>
                 <div class="planet-info">
                     <div class="info-card">
@@ -274,7 +333,7 @@
                     </div>
                     <div class="info-card">
                         <h3>Vệ tinh</h3>
-                        <p>2 - Phobos & Deimos</p>
+                        <p>2 - Phobos & Deimos </p>
                     </div>
                     <div class="info-card">
                         <h3>Chu kỳ quay</h3>
@@ -289,8 +348,6 @@
         </div>
     </section>
 
-    <!-- ============ TIMELINE: dòng thời gian khám phá ============ -->
-    <!-- Grid layout: 4 mốc thời gian trên 1 hàng -->
     <section class="timeline">
         <div class="container">
             <div class="section-title">
@@ -306,28 +363,30 @@
                 <div class="timeline-item">
                     <span>1543</span>
                     <h3>Trái Đất</h3>
-                    <p>Nicolaus Copernicus công bố thuyết Nhật tâm, chính thức định nghĩa Trái Đất là một hành tinh chuyển động.</p>
+                    <p>Nicolaus Copernicus công bố thuyết Nhật tâm,
+                         chính thức định nghĩa Trái Đất là một hành tinh chuyển động.</p>
                 </div>
                 <div class="timeline-item">
                     <span>1610</span>
                     <h3>Sao Kim</h3>
-                    <p>Galileo Galilei dùng kính thiên văn phát hiện các pha tròn khuyết, chứng minh hành tinh này quay quanh Mặt Trời.</p>
+                    <p>Galileo Galilei dùng kính thiên văn phát hiện các pha tròn khuyết,
+                         chứng minh hành tinh này quay quanh Mặt Trời.</p>
                 </div>
                 <div class="timeline-item">
                     <span>1659</span>
                     <h3>Sao Hỏa</h3>
-                    <p>Christiaan Huygens phát hiện vùng tối Syrtis Major bằng kính thiên văn và phác thảo bản đồ bề mặt đầu tiên.</p>
+                    <p>Christiaan Huygens phát hiện vùng tối Syrtis Major bằng kính thiên văn 
+                        và phác thảo bản đồ bề mặt đầu tiên.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============ COMPARISON: bảng so sánh thông số ============ -->
     <section class="comparison">
         <div class="container">
             <div class="section-title">
                 <p>SO SÁNH</p>
-                <h2>Thông số các hành tinh đất đá</h2>
+                <h2>Thông số các hành tinh đất</h2>
             </div>
             <table class="comparison-table">
                 <thead>
@@ -373,8 +432,6 @@
         </div>
     </section>
 
-    <!-- ============ FUN FACTS: những điều thú vị ============ -->
-    <!-- Grid layout: 4 cột -->
     <section class="fun-facts">
         <div class="container">
             <div class="section-title">
@@ -386,34 +443,35 @@
                     <i class="fa-solid fa-cake-candles"></i>
                     <h3>Năm ngắn hơn ngày</h3>
                     <p>Sao Thủy mất 88 ngày Trái Đất để đi hết một vòng quanh Mặt Trời (1 năm).
-                        Nhưng nó mất tới 176 ngày Trái Đất để hoàn thành một chu kỳ ngày-đêm (1 ngày mặt trời).
-                        Nghĩa là ở đây, bạn sẽ đón sinh nhật 2 lần trước khi một ngày khép lại.</p>
+                         Nhưng nó mất tới 176 ngày Trái Đất để hoàn thành một chu kỳ ngày-đêm (1 ngày mặt trời).
+                          Nghĩa là ở đây, 
+                        bạn sẽ đón sinh nhật 2 lần trước khi một ngày khép lại.</p>
                 </div>
                 <div class="fact-card">
                     <i class="fa-regular fa-clock"></i>
                     <h3>Ngôi sao nổi loạn</h3>
                     <p>Trong khi hầu hết các hành tinh đều quay quanh trục theo chiều kim đồng hồ,
-                        Sao Kim lại một mình một ngựa quay theo chiều ngược lại.
-                        Nếu sống ở Sao Kim, sẽ thấy Mặt Trời mọc ở hướng Tây và lặn ở hướng Đông.</p>
+                         Sao Kim lại một mình một ngựa quay theo chiều ngược lại. 
+                         Nếu sống ở Sao Kim, 
+                         sẽ thấy Mặt Trời mọc ở hướng Tây và lặn ở hướng Đông.</p>
                 </div>
                 <div class="fact-card">
                     <i class="fa-solid fa-user-secret"></i>
                     <h3>Kẻ mạo danh</h3>
-                    <p>Trái Đất là hành tinh duy nhất trong Hệ Mặt Trời không được đặt tên theo một vị thần La Mã hay Hy Lạp (như Mercury, Venus, Mars).
+                    <p>Trái Đất là hành tinh duy nhất trong Hệ Mặt Trời không được đặt tên theo một vị thần La Mã hay Hy Lạp (như Mercury, Venus, Mars). 
                         Từ "Earth" trong tiếng Anh cổ chỉ đơn giản có nghĩa là "mặt đất".</p>
                 </div>
                 <div class="fact-card">
                     <i class="fa-solid fa-moon"></i>
                     <h3>Vệ tinh bị nguyền rủa</h3>
-                    <p>Phobos - một trong hai vệ tinh của sao Hỏa, đang bị lực hấp dẫn của Sao Hỏa kéo lại gần với tốc độ 1,8 mét mỗi thế kỷ.
-                        Dự kiến trong 30-50 triệu năm nữa, nó sẽ đâm sầm vào Sao Hỏa hoặc bị xé toạc thành một vành đai vụn đá.</p>
+                    <p>Phobos - một trong hai vệ tinh của sao Hỏa, đang bị lực hấp dẫn của Sao Hỏa kéo lại gần với tốc độ 1,8 mét mỗi thế kỷ. 
+                        Dự kiến trong 30-50 triệu năm nữa,
+                         nó sẽ đâm sầm vào Sao Hỏa hoặc bị xé toạc thành một vành đai vụn đá.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ============ GALLERY: thư viện hình ảnh ============ -->
-    <!-- Grid layout: 2 ảnh mỗi hàng -->
     <section class="gallery">
         <div class="container">
             <div class="section-title">
@@ -432,7 +490,7 @@
                     <img src="images/saokimthuvien.jpg" alt="Sao Kim">
                     <div class="gallery-caption">
                         <h3>Sao Kim</h3>
-                        <p>Kẻ nổi loạn</p>
+                        <p>Kẻ nỗi loạn </p>
                     </div>
                 </div>
                 <div class="gallery-item">
@@ -452,26 +510,7 @@
             </div>
         </div>
     </section>
-
-    <!-- ============ CTA: kêu gọi hành động ============ -->
-    <section class="cta">
-        <div class="container">
-            <h2>Hãy tiếp tục khám phá vũ trụ!</h2>
-            <p>
-                Mỗi hành tinh đều ẩn chứa những điều kỳ diệu đang chờ con người khám phá.
-                Hành trình tìm hiểu Hệ Mặt Trời chỉ mới bắt đầu.
-            </p>
-            <div style="margin-bottom: 20px;">
-                <a href="#">Khám phá thêm</a>
-            </div>
-            <div>
-                <a href="index.html" class="back-home">Quay về Trang chủ</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ FOOTER ============ -->
-    <!-- Grid layout: 3 cột (logo, liên kết, mạng xã hội) -->
+   
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-logo">
@@ -482,9 +521,10 @@
                 <h3>Liên kết</h3>
                 <ul>
                     <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#overview">Giới thiệu</a></li>
-                    <li><a href="#saothuy">Các hành tinh</a></li>
-                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="#overview">Hành tinh đất đá</a></li>
+                    <li><a href="#jupiter">Hành tinh khí khổng lồ</a></li>
+                    <li><a href="#">Space store</a></li>
+                    <li><a href="#">Giỏ hàng</a></li>
                 </ul>
             </div>
             <div class="footer-links">
@@ -497,9 +537,127 @@
             </div>
         </div>
         <div class="footer-bottom">
-            © 2026 Space Store | Giant Planets Project
+            © 2026 Space Store | Hành Tinh Đất Đá
         </div>
     </footer>
+ <!--=========================OVERLAY========================= -->
 
+  <div class="overlay" id="overlay"></div>
+
+  <!--=======================SIGN IN MENU======================-->
+
+  <div class="modal js-modal signinMenu">
+    <div class="modal-container js-modal-container">
+      <div class="modal-header">
+        <i class="fa-solid fa-xmark js-xmark" id="signinClose"></i>
+        <div class="modal-tag">
+          <div class="modal-signin-logo">
+            <i class="fa-solid fa-earth-asia"></i>
+            <div>
+              <h2>Planet Journey</h2>
+            </div>
+          </div>
+          <h3>Đăng nhập tài khoản</h3>
+        </div>
+      </div>
+      <div class="modal-body">
+        <label for="log-in-email" class="modal-label">
+          <i class="fa-regular fa-envelope"></i> Email
+        </label>
+        <input id="signinEmail" type="email" class="modal-input sign-in-input" placeholder="Nhập email của bạn">
+        <label for="signinPassword" class="modal-label">
+          <i class="fa-solid fa-lock"></i> Mật khẩu
+        </label>
+        <div class="password-box">
+          <input type="password" id="signinPassword" class="modal-input sign-in-input" placeholder="Nhập mật khẩu">
+          <i class="fa-solid fa-eye-slash fa-fw" id="togglePassword"></i>
+        </div>
+        <button id="signinSubmitButton" type="button">ĐĂNG NHẬP</button>
+      </div>
+      <div class="modal-footer">
+        <p class="divider-text">Hoặc đăng nhập bằng</p>
+        <div class="social-login">
+          <a href="#" class="social-btn google">
+            <img src="images/google.png" alt="Google">
+            <span>Google</span>
+          </a>
+          <a href="#" class="social-btn facebook">
+            <img src="images/facebook.png" alt="Facebook">
+            <span>Facebook</span>
+          </a>
+        </div>
+        <p class="footer-end">Bạn chưa có tài khoản?<a href="#" class="js-register-btn">Đăng ký ngay</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!--================SIGN UP MENU==============-->
+
+  <div class="modal-register js-modal-register signupMenu">
+    <div class="modal-container">
+      <div class="modal-header">
+        <i class="fa-solid fa-xmark js-xmarkReg" id="signupClose"></i>
+        <div class="modal-tag">
+          <div class="modal-signup-logo">
+            <i class="fa-solid fa-earth-asia"></i>
+            <div>
+              <h2>Planet Journey</h2>
+            </div>
+          </div>
+          <h3>Tạo tài khoản mới</h3>
+          <p>Đăng ký để khám phá những điểu thú vị về vũ trụ!</p>
+        </div>
+      </div>
+      <div class="signup-modal-body">
+        <div class="name-and-tel">
+          <div class="body-box box-name">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" id="name" class="signupInput" placeholder="Họ và tên">
+          </div>
+          <div class="body-box box-tel">
+            <i class="fa-solid fa-phone"></i>
+            <input type="tel" id="number-phone" class="signupInput signup-phone" placeholder="Số điện thoại">
+          </div>
+        </div>
+        <div class="body-box">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="text" id="email-register" class="signupInput signup-email" placeholder="Nhập email">
+        </div>
+        <div class="body-box">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="signupPassword" class="signupInput signup-password" placeholder="Nhập mật khẩu">
+          <i class="fa-solid fa-eye-slash fa-fw" id="toggleSignupPassword"></i>
+        </div>
+        <div class="body-box">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="signupConfirmPassword" class="signupInput signup-confirm-password"
+            placeholder="Xác nhận mật khẩu">
+          <i class="fa-solid fa-eye-slash fa-fw" id="toggleSignupConfirmPassword"></i>
+        </div>
+        <div class="register-agree">
+          <input type="checkbox" id="checkboxValue">
+          <p>Tôi đồng ý với <a href="#">Điều khoản sử dụng</a> với <a href="#">Chính sách bảo mật</a></p>
+        </div>
+        <button id="signupSubmitButton" type="button">Đăng ký</button>
+      </div>
+      <div class="modal-footer">
+        <p class="divider-text">Hoặc đăng nhập bằng</p>
+        <div class="social-login">
+          <a href="#" class="social-btn google">
+            <img src="images/google.png" alt="Google">
+            <span>Google</span>
+          </a>
+          <a href="#" class="social-btn facebook">
+            <img src="images/facebook.png" alt="Facebook">
+            <span>Facebook</span>
+          </a>
+        </div>
+        <p class="footer-end">Bạn đã có tài khoản? <a href="#" class="js-login-btn"> Đăng nhập ngay</a></p>
+      </div>
+    </div>
+  </div>
+
+    <script src="script.js"></script>
+    <script src="chung.js"></script>
 </body>
 </html>
