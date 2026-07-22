@@ -29,77 +29,70 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f1f5f9;
-    padding: 8px 5%;
-    border-bottom: 1px solid #e2e8f0;
+    background-color: #0b1329; 
+    padding: 10px 5%;
+    color: #ffffff;
 }
 
 .welcome__text {
     font-size: 13px;
-    color: #475569;
+    color: #ffffff;
+    font-weight: 500;
 }
 
 .welcome__link {
     display: flex;
     align-items: center;
-    gap: 15px;
-}
-
-.welcome__config {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
+    gap: 20px;
 }
 
 .welcome__config a {
     text-decoration: none;
-    color: #64748b;
+    color: #ffffff; /* Chữ Đăng nhập / Đăng ký màu trắng */
     font-weight: 500;
-    transition: color 0.2s;
+    transition: opacity 0.2s;
 }
 
 .welcome__config a:hover {
-    color: #1d4ed8;
+    opacity: 0.8;
 }
 
 .welcome__divider {
-    color: #cbd5e1;
+    color: #ffffff;
 }
 
 .welcome__cart {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     text-decoration: none;
-    color: #ffffff;
-    background-color: #1d4ed8;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    transition: background 0.2s;
+    color: #ffffff; 
+    font-size: 13px;
+    font-weight: 500;
+    background-color: transparent; 
+    padding: 0;
 }
 
 .welcome__cart:hover {
-    background-color: #1e40af;
+    opacity: 0.8;
 }
-
 .cart-count {
     background-color: #ef4444;
     color: #ffffff;
     font-size: 10px;
     font-weight: 700;
-    padding: 1px 4px;
+    padding: 2px 6px;
     border-radius: 10px;
     line-height: 1;
 }
+
 
 .header__bottom-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 5%;
+    padding: 18px 5%;
+    background-color: #ffffff;
 }
 
 .logo {
@@ -111,54 +104,42 @@ body {
 }
 
 .logo i {
-    font-size: 38px;
+    font-size: 42px;
     color: #2563eb;
     padding: 0;
 }
 
-.logo div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .logo div h1 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
-    color: #0f172a;
+    color: #0b1329;
     line-height: 1.2;
     margin: 0;
-    padding: 0;
 }
 
 .logo div span {
     font-size: 12px;
     color: #64748b;
-    line-height: 1.2;
     margin-top: 2px;
 }
 
 .nav-bar__nav {
     display: flex;
     list-style: none;
-    gap: 25px;
-}
-
-.nav-bar__item {
-    position: relative;
+    gap: 30px;
 }
 
 .nav-bar__link {
     text-decoration: none;
-    color: #334155;
-    font-weight: 600;
+    color: #0b1329;
+    font-weight: 700; 
     font-size: 15px;
     transition: color 0.2s;
 }
 
 .nav-bar__link:hover,
 .nav-bar__link--active {
-    color: #1d4ed8;
+    color: #2563eb;
 }
 
 .dropdown-submenu {
