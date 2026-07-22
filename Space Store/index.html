@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planet Journey</title>
+    <title>Space Store</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -62,7 +62,7 @@
     </header>
 
     <main>
-        <!-- KHỐI HERO BANNER -->
+        <!-- HERO BANNER -->
         <section class="hero">
             <div class="overlay">
                 <div class="hero-content">
@@ -73,7 +73,7 @@
             </div>
         </section>
 
-        <!-- DANH SÁCH SẢN PHẨM -->
+        <!-- DANH SÁCH 8 SẢN PHẨM -->
         <section class="products" id="products">
             <h2>TẤT CẢ SẢN PHẨM</h2>
             <div class="product-list">
@@ -82,10 +82,16 @@
                 <article class="product">
                     <p class="product__id">1</p>
                     <div class="product__img-box">
-                        <img src="./images/DSC06418.jpg" alt="Sách thiên văn học" onclick="openModalById('1')">
+                        <img src="./images/DSC06418.jpg" alt="Sách Thiên Văn Học" onclick="openModal(this)">
+                        <button class="product__btn-detail" onclick="openModal(this)" title="Xem chi tiết">
+                            <i class="fa-solid fa-expand"></i>
+                        </button>
                     </div>
                     <h3>Sách Thiên Văn Học</h3>
                     <p class="product__price">150.000₫</p>
+                    <p class="product__description" style="display: none;">
+                        Cuốn sách thiên văn học toàn diện dành cho người mới bắt đầu. Sách gồm 300 trang in màu sắc nét, chứa đầy đủ thông tin chi tiết về các hệ hành tinh, ngôi sao và các hiện tượng kỳ thú trong vũ trụ.
+                    </p>
                     <div class="product__buttons">
                         <button class="product__btn-buy" onclick="buyNow(this)">Mua ngay</button>
                         <button class="product__btn-cart">Thêm vào giỏ</button>
@@ -96,10 +102,16 @@
                 <article class="product">
                     <p class="product__id">2</p>
                     <div class="product__img-box">
-                        <img src="./images/saohoa.jpg" alt="Mô hình Sao Hỏa" onclick="openModalById('2')">
+                        <img src="./images/saohoa.jpg" alt="Mô hình Sao Hỏa" onclick="openModal(this)">
+                        <button class="product__btn-detail" onclick="openModal(this)" title="Xem chi tiết">
+                            <i class="fa-solid fa-expand"></i>
+                        </button>
                     </div>
                     <h3>Mô hình Sao Hỏa</h3>
                     <p class="product__price">850.000₫</p>
+                    <p class="product__description" style="display: none;">
+                        Mô hình Sao Hỏa (Mars) được mô phỏng tỷ lệ 1:10.000.000 dựa trên dữ liệu bản đồ không gian của NASA. Bề mặt sơn thủ công chi tiết tái hiện núi Olympus Mons và các thung lũng đỏ rực rỡ.
+                    </p>
                     <div class="product__buttons">
                         <button class="product__btn-buy" onclick="buyNow(this)">Mua ngay</button>
                         <button class="product__btn-cart">Thêm vào giỏ</button>
@@ -110,10 +122,16 @@
                 <article class="product">
                     <p class="product__id">3</p>
                     <div class="product__img-box">
-                        <img src="./images/saomoc.jpg" alt="Mô hình Sao Mộc" onclick="openModalById('3')">
+                        <img src="./images/saomoc.jpg" alt="Mô hình Sao Mộc" onclick="openModal(this)">
+                        <button class="product__btn-detail" onclick="openModal(this)" title="Xem chi tiết">
+                            <i class="fa-solid fa-expand"></i>
+                        </button>
                     </div>
                     <h3>Mô hình Sao Mộc</h3>
                     <p class="product__price">1.200.000₫</p>
+                    <p class="product__description" style="display: none;">
+                        Mô hình gã khổng lồ khí Sao Mộc (Jupiter) trang bị đèn LED bên trong giúp phát sáng tựa như một hành tinh thật trong đêm. Tái hiện lại Vết Đỏ Lớn nổi tiếng và các dải mây sinh động.
+                    </p>
                     <div class="product__buttons">
                         <button class="product__btn-buy" onclick="buyNow(this)">Mua ngay</button>
                         <button class="product__btn-cart">Thêm vào giỏ</button>
@@ -124,10 +142,16 @@
                 <article class="product">
                     <p class="product__id">4</p>
                     <div class="product__img-box">
-                        <img src="./images/45.jpg" alt="Kính thiên văn mini" onclick="openModalById('4')">
+                        <img src="./images/45.jpg" alt="Kính Thiên Văn Mini" onclick="openModal(this)">
+                        <button class="product__btn-detail" onclick="openModal(this)" title="Xem chi tiết">
+                            <i class="fa-solid fa-expand"></i>
+                        </button>
                     </div>
                     <h3>Kính Thiên Văn Mini</h3>
                     <p class="product__price">3.000.000₫</p>
+                    <p class="product__description" style="display: none;">
+                        Kính thiên văn khúc xạ mini với độ phóng đại lên tới 70x. Ống kính tráng phủ nhiều lớp chống phản quang, giúp quan sát bề mặt Mặt Trăng và các chòm sao rõ nét. Thích hợp mang đi dã ngoại.
+                    </p>
                     <div class="product__buttons">
                         <button class="product__btn-buy" onclick="buyNow(this)">Mua ngay</button>
                         <button class="product__btn-cart">Thêm vào giỏ</button>
@@ -138,10 +162,16 @@
                 <article class="product">
                     <p class="product__id">5</p>
                     <div class="product__img-box">
-                        <img src="./images/saotho.jpg" alt="Mô hình Sao Thổ" onclick="openModalById('5')">
+                        <img src="./images/saotho.jpg" alt="Mô hình Sao Thổ" onclick="openModal(this)">
+                        <button class="product__btn-detail" onclick="openModal(this)" title="Xem chi tiết">
+                            <i class="fa-solid fa-expand"></i>
+                        </button>
                     </div>
                     <h3>Mô hình Sao Thổ</h3>
                     <p class="product__price">1.450.000₫</p>
+                    <p class="product__description" style="display: none;">
+                        Mô hình Sao Thổ (Saturn) đi kèm vành đai đĩa trong suốt được cắt khắc bằng laser tinh xảo. Sản phẩm đi kèm chân đế bằng gỗ cao cấp, thích hợp làm quà tặng hoặc trang trí bàn làm việc.
+                    </p>
                     <div class="product__buttons">
                         <button class="product__btn-buy" onclick="buyNow(this)">Mua ngay</button>
                         <button class="product__btn-cart">Thêm vào giỏ</button>
@@ -152,10 +182,16 @@
                 <article class="product">
                     <p class="product__id">6</p>
                     <div class="product__img-box">
-                        <img src="./images/12.jpg" alt="Móc khoá phi hành gia" onclick="openModalById('6')">
+                        <img src="./images/12.jpg" alt="Móc khoá phi hành gia" onclick="openModal(this)">
+                        <button class="product__btn-detail" onclick="openModal(this)" title="Xem chi tiết">
+                            <i class="fa-solid fa-expand"></i>
+                        </button>
                     </div>
                     <h3>Móc khoá phi hành gia</h3>
                     <p class="product__price">95.000₫</p>
+                    <p class="product__description" style="display: none;">
+                        Móc khóa hình phi hành gia đáng yêu đúc từ silicon dẻo cao cấp chống trầy xước. Tích hợp đèn LED phát sáng nhỏ ở kính mũ bảo hiểm, thích hợp treo chìa khóa hoặc balo.
+                    </p>
                     <div class="product__buttons">
                         <button class="product__btn-buy" onclick="buyNow(this)">Mua ngay</button>
                         <button class="product__btn-cart">Thêm vào giỏ</button>
@@ -166,10 +202,16 @@
                 <article class="product">
                     <p class="product__id">7</p>
                     <div class="product__img-box">
-                        <img src="./images/tauvutru.jpg" alt="Mô hình lắp ghép tàu vũ trụ" onclick="openModalById('7')">
+                        <img src="./images/tauvutru.jpg" alt="Mô hình lắp ghép tàu vũ trụ" onclick="openModal(this)">
+                        <button class="product__btn-detail" onclick="openModal(this)" title="Xem chi tiết">
+                            <i class="fa-solid fa-expand"></i>
+                        </button>
                     </div>
                     <h3>Mô hình lắp ghép tàu vũ trụ</h3>
                     <p class="product__price">450.000₫</p>
+                    <p class="product__description" style="display: none;">
+                        Bộ đồ chơi lắp ghép 3D bệ phóng tên lửa và tàu vũ trụ không gian gồm 500+ mảnh ghép. Rèn luyện tư duy logic, tính kiên nhẫn và niềm yêu thích khoa học khám phá cho mọi lứa tuổi.
+                    </p>
                     <div class="product__buttons">
                         <button class="product__btn-buy" onclick="buyNow(this)">Mua ngay</button>
                         <button class="product__btn-cart">Thêm vào giỏ</button>
@@ -180,10 +222,16 @@
                 <article class="product">
                     <p class="product__id">8</p>
                     <div class="product__img-box">
-                        <img src="./images/mhhmt.jpg" alt="Mô hình Hệ Mặt Trời" onclick="openModalById('8')">
+                        <img src="./images/mhhmt.jpg" alt="Mô hình Hệ Mặt Trời" onclick="openModal(this)">
+                        <button class="product__btn-detail" onclick="openModal(this)" title="Xem chi tiết">
+                            <i class="fa-solid fa-expand"></i>
+                        </button>
                     </div>
                     <h3>Mô hình Hệ Mặt Trời</h3>
                     <p class="product__price">650.000₫</p>
+                    <p class="product__description" style="display: none;">
+                        Bộ sưu tập 8 hành tinh Hệ Mặt Trời được chế tác từ đá pha lệ thiên nhiên vô cùng sang trọng. Mỗi viên đá tượng trưng cho màu sắc và đặc tính độc đáo của một hành tinh.
+                    </p>
                     <div class="product__buttons">
                         <button class="product__btn-buy" onclick="buyNow(this)">Mua ngay</button>
                         <button class="product__btn-cart">Thêm vào giỏ</button>
@@ -206,7 +254,7 @@
                     <li><a class="categories__link" href="/home-page/space-store/index.html">Trang chủ</a></li>
                     <li><a class="categories__link" href="/GIANT-PLANETS/giant-planets.html">Các hành tinh khí khổng lồ</a></li>
                     <li><a class="categories__link" href="/HÀNH TINH ĐẤT ĐÁ/index.html">Các hành tinh đất đá</a></li>
-                    <li><a class="categories__link" href="/Cart/cart.html">Giỏ hàng</a></li>
+                    <li><a class="categories__link" href="/Space Store/index.html">Space Store</a></li>
                 </ul>
             </div>
             <div class="contact">
@@ -221,10 +269,30 @@
         </div>
     </footer>
 
-    <!-- KHUNG THÔNG BÁO TOAST NOTIFICATION -->
+    <!-- MODAL / POPUP CHI TIẾT SẢN PHẨM BẰNG THẺ ARTICLE -->
+    <div id="productModal" class="modal" onclick="closeModalOnOutsideClick(event)">
+        <article class="modal__card">
+            <button type="button" class="modal__close-btn" onclick="closeModal()">&times;</button>
+            <div class="modal__body">
+                <div class="modal__img-box">
+                    <img id="modalImg" src="" alt="Hình sản phẩm">
+                </div>
+                <div class="modal__info">
+                    <h2 id="modalTitle">Tên sản phẩm</h2>
+                    <p id="modalPrice" class="modal__price">0₫</p>
+                    <div class="modal__description-box">
+                        <h3>Mô tả chi tiết:</h3>
+                        <p id="modalDesc">Nội dung chi tiết...</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <!-- TOAST THÔNG BÁO -->
     <div id="toast-notification" class="toast">
-        <i class="fas fa-check-circle"></i>
-        <span>Đã thêm sản phẩm vào giỏ hàng!</span>
+        <i class="fas fa-circle-check"></i>
+        <span id="toast-message">Đã thêm vào giỏ hàng!</span>
     </div>
 
     <script src="scripts.js"></script>
