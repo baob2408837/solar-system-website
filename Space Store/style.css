@@ -19,7 +19,7 @@ body {
     color: #334155;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 .header {
     background-color: #ffffff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -206,7 +206,7 @@ body {
     color: #1d4ed8;
 }
 
-/* ================= HERO BANNER ================= */
+/* HERO BANNER */
 .hero {
     height: 500px;
     background: url('./images/banner.jpg') center/cover;
@@ -254,7 +254,7 @@ body {
     background: #1238ca;
 }
 
-/* ================= DANH SÁCH SẢN PHẨM ================= */
+/* DANH SÁCH SẢN PHẨM */
 .products {
     padding: 60px 4%;
     max-width: 1440px;
@@ -267,7 +267,6 @@ body {
     font-weight: 700;
     color: #0f172a;
     margin-bottom: 40px;
-    position: relative;
 }
 
 .product-list {
@@ -321,6 +320,35 @@ body {
 
 .product__img-box img:hover {
     transform: scale(1.05);
+}
+
+.product__btn-detail {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    background-color: rgba(15, 23, 42, 0.65);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 13px;
+    opacity: 0.8;
+    transition: all 0.2s ease-in-out;
+    z-index: 2;
+}
+
+.product:hover .product__btn-detail {
+    opacity: 1;
+}
+
+.product__btn-detail:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.15);
 }
 
 .product h3 {
@@ -382,7 +410,7 @@ body {
     color: #0f172a;
 }
 
-/* ================= CỬA SỔ MODAL (POPUP) ================= */
+/* POPUP MODAL CHI TIẾT SẢN PHẨM */
 .modal {
     position: fixed;
     top: 0;
@@ -489,7 +517,7 @@ body {
     line-height: 1.6;
 }
 
-/* ================= TOAST NOTIFICATION ================= */
+/* TOAST NOTIFICATION */
 .toast {
     position: fixed;
     bottom: 30px;
@@ -523,149 +551,145 @@ body {
     transform: translateY(0);
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 .footer {
-  background: #050d18;
-  color: var(--text);
-  width: 100%;
-  display: grid;
-  grid-template-rows: 1fr auto;
+    background: #050d18;
+    color: var(--text);
+    width: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
 }
 
 .footer__main {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  padding: 30px 0;
-  box-sizing: border-box;
-  gap: 40px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding: 30px 0;
+    box-sizing: border-box;
+    gap: 40px;
 }
 
 .description {
-  grid-column: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-  gap: 6px;
-  max-width: 480px;
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 6px;
+    max-width: 480px;
 }
 
 .description__logo {
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: var(--fs-large);
-  padding: 0;
-  margin: 0;
-  white-space: nowrap;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: var(--fs-large);
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
 }
 
 .logo__first-half {
-  color: var(--text);
+    color: var(--text);
 }
 
 .logo__second-half {
-  color: var(--primary);
+    color: var(--primary);
 }
 
 .description__text {
-  color: var(--gray);
-  font-size: var(--fs-normal);
-  line-height: 1.6;
+    color: var(--gray);
+    font-size: var(--fs-normal);
+    line-height: 1.6;
 }
 
 .categories {
-  grid-column: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-  gap: 5px;
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 5px;
 }
 
 .categories__title {
-  font-family: sans-serif;
-  padding: 0;
-  margin: 0;
-  font-weight: bold;
-  font-size: var(--fs-large);
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-size: var(--fs-large);
 }
 
 .categories__list {
-  padding-top: 5px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  list-style: none;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
 }
 
 .categories__link {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  font-size: var(--fs-normal);
-  color: var(--gray);
-  text-decoration: none;
-  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    font-size: var(--fs-normal);
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .categories__link:hover {
-  transform: translateX(5px);
-  color: var(--text);
-}
-
-.categories__link:active {
-  color: var(--primary);
+    transform: translateX(5px);
+    color: var(--text);
 }
 
 .contact {
-  grid-column: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: start;
-  gap: 10px;
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
 }
 
 .contact__title {
-  font-size: var(--fs-large);
-  font-weight: bold;
-  font-family: sans-serif;
-  padding: 0;
-  margin: 0;
+    font-size: var(--fs-large);
+    font-weight: bold;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 .contact__link {
-  color: var(--gray);
-  text-decoration: none;
-  font-size: var(--fs-normal);
-  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    color: var(--gray);
+    text-decoration: none;
+    font-size: var(--fs-normal);
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .contact__link:hover {
-  color: var(--text);
-  transform: translateX(5px);
+    color: var(--text);
+    transform: translateX(5px);
 }
 
 .footer__copyright {
-  width: 100%;
-  display: block;
-  padding: 0;
-  margin: 0;
-  border-top: solid 1px var(--border);
+    width: 100%;
+    display: block;
+    padding: 0;
+    margin: 0;
+    border-top: solid 1px var(--border);
 }
 
 .copyright__text {
-  text-align: center;
-  padding: 15px 0;
-  margin: 0;
-  color: var(--gray);
-  font-size: 13px;
+    text-align: center;
+    padding: 15px 0;
+    margin: 0;
+    color: var(--gray);
+    font-size: 13px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* RESPONSIVE */
 @media (max-width: 1024px) {
     .product {
         min-width: 45%;
