@@ -1,0 +1,218 @@
+/*=====link đưa vào <head> ngay trước link css riêng=====*/
+
+  <link rel="stylesheet" href="../chung.css">
+
+/*========html đưa vào <body> ngang hàng với main========*/
+
+<!--===================HEADER==================-->
+
+  <header>
+    <div class="top-bar">
+      <p>🚀 Chào mừng bạn đến với Planet Journey!</p>
+      <div class="top-links">
+        <div class="top-bar__login">
+          <a href="#" class="js-login">
+            <i class="fa-regular fa-user"></i>
+            Đăng nhập
+          </a>
+          <span>/</span>
+          <a href="#" class="js-signup">
+            Đăng ký
+          </a>
+        </div>
+        <a href="/CART/cart.html">
+          <i class="fa-solid fa-cart-shopping"></i>
+          Giỏ hàng
+        </a>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-earth-asia"></i>
+        <div>
+          <h1>Planet Journey</h1>
+          <span>Khám phá vũ trụ trong tầm tay</span>
+        </div>
+      </div>
+
+      <ul class="menu">
+        <li><a href="/home-page/space-store/index.html">Trang chủ</a></li>
+        <li><a href="/HÀNH TINH ĐẤT ĐÁ/index.html">Hành tinh Đất đá</a></li>
+        <li><a href="/GIANT-PLANETS/giant-planets.html">Hành tinh Khí khổng lồ</a></li>
+        <li><a href="/Space Store/index.html">Space Store</a></li>
+        <li><a href="/CART/cart.html">Giỏ hàng</a></li>
+      </ul>
+
+      <button class="navbar__mobile" type="button"><i class="fa-solid fa-bars"></i></button>
+
+    </nav>
+  </header>
+
+  <!--===============MOBILE MENU================-->
+
+  <div class="mobile-menu">
+    <div class="menu-toggle">
+      <button class="mobile-menu__toggle" type="button"><i class="fa-solid fa-bars"></i></button>
+      <ul class="dropdown">
+        <li><a href="/home-page/space-store/index.html">Trang chủ</a></li>
+        <li><a href="/HÀNH TINH ĐẤT ĐÁ/index.html">Hành tinh Đất đá</a></li>
+        <li><a href="/GIANT-PLANETS/giant-planets.html">Hành tinh Khí khổng lồ</a></li>
+        <li><a href="/Space Store/index.html">Space Store</a></li>
+        <li><a href="/CART/cart.html">Giỏ hàng</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!--=======================FOOTER=====================-->
+
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="description">
+        <p class="description__logo"><span class="logo__first-half">Planet</span><span
+            class="logo__second-half">Journey</span></p>
+        <p class="description__text">Website giới thiệu kiến thức về các hành tinh khí khổng lồ trong Hệ Mặt Trời</p>
+      </div>
+      <div class="categories">
+        <p class="categories__title">Danh mục</p>
+        <ul class="categories__list">
+          <li><a class="categories__link" href="/home-page/space-store/index.html">Trang chủ</a></li>
+          <li><a class="categories__link" href="/GIANT-PLANETS/giant-planets.html">Các hành tinh khí khổng lồ</a></li>
+          <li><a class="categories__link" href="/HÀNH TINH ĐẤT ĐÁ/index.html">Các hành tinh đất đá</a></li>
+          <li><a class="categories__link" href="/Space Store/index.html">Space Store</a></li>
+          <li><a class="categories__link" href="cart.html">Giỏ hàng</a></li>
+        </ul>
+      </div>
+      <div class="contact">
+        <p class="contact__title">Theo dõi</p>
+        <a class="contact__link" href="#"><i class="fab fa-facebook contact__link--icon"></i>
+          Facebook</a>
+        <a class="contact__link" href="#"><i class="fab fa-instagram contact__link--icon"></i>
+          Instagram</a>
+        <a class="contact__link" target="_blank" href="https://github.com/baob2408837/solar-system-website.git"><i
+            class="fab fa-github contact__link--icon"></i> Github</a>
+      </div>
+    </div>
+    <div class="footer__copyright">
+      <p class="copyright__text">&copy; 2026 Planet Journey | Cart Project</p>
+    </div>
+  </footer>
+
+  <!--=========================OVERLAY========================= -->
+
+  <div class="overlay" id="overlay"></div>
+
+  <!--=======================SIGN IN MENU======================-->
+
+  <div class="modal js-modal signinMenu">
+    <div class="modal-container js-modal-container">
+      <div class="modal-header">
+        <i class="fa-solid fa-xmark js-xmark" id="signinClose"></i>
+        <div class="modal-tag">
+          <div class="modal-signin-logo">
+            <i class="fa-solid fa-earth-asia"></i>
+            <div>
+              <h2>Planet Journey</h2>
+            </div>
+          </div>
+          <h3>Đăng nhập tài khoản</h3>
+        </div>
+      </div>
+      <div class="modal-body">
+        <label for="log-in-email" class="modal-label">
+          <i class="fa-regular fa-envelope"></i> Email
+        </label>
+        <input id="signinEmail" type="email" class="modal-input sign-in-input" placeholder="Nhập email của bạn">
+        <label for="signinPassword" class="modal-label">
+          <i class="fa-solid fa-lock"></i> Mật khẩu
+        </label>
+        <div class="password-box">
+          <input type="password" id="signinPassword" class="modal-input sign-in-input" placeholder="Nhập mật khẩu">
+          <i class="fa-solid fa-eye-slash fa-fw" id="togglePassword"></i>
+        </div>
+        <button id="signinSubmitButton" type="button">ĐĂNG NHẬP</button>
+      </div>
+      <div class="modal-footer">
+        <p class="divider-text">Hoặc đăng nhập bằng</p>
+        <div class="social-login">
+          <a href="#" class="social-btn google">
+            <img src="images/google.png" alt="Google">
+            <span>Google</span>
+          </a>
+          <a href="#" class="social-btn facebook">
+            <img src="images/facebook.png" alt="Facebook">
+            <span>Facebook</span>
+          </a>
+        </div>
+        <p class="footer-end">Bạn chưa có tài khoản?<a href="#" class="js-register-btn">Đăng ký ngay</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!--================SIGN UP MENU==============-->
+
+  <div class="modal-container signupMenu">
+    <div class="modal-header">
+      <i class="fa-solid fa-xmark js-xmarkReg" id="signupClose"></i>
+      <div class="modal-tag">
+        <div class="modal-signup-logo">
+          <i class="fa-solid fa-earth-asia"></i>
+          <div>
+            <h2>Planet Journey</h2>
+          </div>
+        </div>
+        <h3>Tạo tài khoản mới</h3>
+        <p>Đăng ký để khám phá những điểu thú vị về vũ trụ!</p>
+      </div>
+    </div>
+    <div class="signup-modal-body">
+      <div class="name-and-tel">
+        <div class="body-box box-name">
+          <i class="fa-regular fa-user"></i>
+          <input type="text" id="name" class="signupInput" placeholder="Họ và tên">
+        </div>
+        <div class="body-box box-tel">
+          <i class="fa-solid fa-phone"></i>
+          <input type="tel" id="number-phone" class="signupInput signup-phone" placeholder="Số điện thoại">
+        </div>
+      </div>
+      <div class="body-box">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="text" id="email-register" class="signupInput signup-email" placeholder="Nhập email">
+      </div>
+      <div class="body-box">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" id="signupPassword" class="signupInput signup-password" placeholder="Nhập mật khẩu">
+        <i class="fa-solid fa-eye-slash fa-fw" id="toggleSignupPassword"></i>
+      </div>
+      <div class="body-box">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" id="signupConfirmPassword" class="signupInput signup-confirm-password"
+          placeholder="Xác nhận mật khẩu">
+        <i class="fa-solid fa-eye-slash fa-fw" id="toggleSignupConfirmPassword"></i>
+      </div>
+      <div class="register-agree">
+        <input type="checkbox" id="checkboxValue">
+        <p>Tôi đồng ý với <a href="#">Điều khoản sử dụng</a> với <a href="#">Chính sách bảo mật</a></p>
+      </div>
+      <button id="signupSubmitButton" type="button">Đăng ký</button>
+    </div>
+    <div class="modal-footer">
+      <p class="divider-text">Hoặc đăng nhập bằng</p>
+      <div class="social-login">
+        <a href="#" class="social-btn google">
+          <img src="images/google.png" alt="Google">
+          <span>Google</span>
+        </a>
+        <a href="#" class="social-btn facebook">
+          <img src="images/facebook.png" alt="Facebook">
+          <span>Facebook</span>
+        </a>
+      </div>
+      <p class="footer-end">Bạn đã có tài khoản? <a href="#" class="js-login-btn"> Đăng nhập ngay</a></p>
+    </div>
+  </div>
+
+/*==========script thêm vào ngay trước script file js riêng=========*/
+
+  <script src="../chung.js"></script>

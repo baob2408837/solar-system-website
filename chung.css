@@ -356,19 +356,22 @@ header {
 .js-modal {
   position: fixed;
   visibility: hidden;
+  display: flex;
   opacity: 0;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.6);
   width: 400px;
   max-width: calc(100% - 40px);
   max-height: 90vh;
   z-index: 1000;
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 .modal.open {
   display: flex;
+  transform: translate(-50%, -50%) scale(1)
 }
 
 .modal-container {
@@ -379,26 +382,15 @@ header {
   border: solid 1px rgb(79, 168, 255);
   border-radius: 20px;
   box-shadow: 0 0 12px rgba(79, 168, 255, .8);
-  animation: showModal ease 0.5s;
+  animation: all 0.3s ease;
   color: var(--text);
   padding: 0px 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  min-height: 550px;
+  min-height: 400px;
+  height: auto;
   box-sizing: border-box;
-}
-
-@keyframes showModal {
-  from {
-    opacity: 0;
-    transform: translateY(-140px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .modal-container .fa-xmark {
@@ -645,7 +637,7 @@ header {
   left: 50%;
   z-index: 1000;
   pointer-events: none;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.6);
   width: 600px;
   max-width: calc(100% - 40px);
   background: var(--card);
@@ -657,12 +649,18 @@ header {
   overflow: hidden;
   height: auto;
   max-height: 90vh;
+  min-height: 400px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  gap: 0;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
+}
+
+.signupMenu.open {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .modal-signup-logo {
