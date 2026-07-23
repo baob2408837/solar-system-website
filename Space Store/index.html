@@ -4,35 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Store</title>
+    <title>Planet Journey - Space Store</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
 
-    <header class="header">
-        <div class="welcome">
-            <div class="welcome__text">
-                <p><span class="icon-rocket">🚀</span> Chào mừng bạn đến với Planet Journey!</p>
-            </div>
-            <div class="welcome__link">
-                <div class="welcome__config">
-                    <a class="welcome__sign-in" href="#"><i class="far fa-user"></i> Đăng nhập</a>
-                    <span class="welcome__divider">/</span>
-                    <a class="welcome__register" href="#">Đăng ký</a>
-                </div>
-                <a class="welcome__cart" href="/CART/cart.html">
+    <!-- OVERLAY -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="top-bar">
+            <p><span class="icon-rocket">🚀</span> Chào mừng bạn đến với Planet Journey!</p>
+            <div class="top-links top-bar__login">
+                <a href="#" class="js-login"><i class="far fa-user"></i> Đăng nhập</a>
+                <span>/</span>
+                <a href="#" class="js-signup">Đăng ký</a>
+                <a href="/CART/cart.html" class="welcome__cart">
                     <i class="fas fa-cart-shopping"></i> Giỏ hàng
                     <span id="cart-count" class="cart-count">0</span>
                 </a>
             </div>
         </div>
 
-        <div class="header__bottom-bar">
+        <nav class="navbar">
             <div class="logo">
                 <i class="fa-solid fa-earth-asia"></i>
                 <div>
@@ -41,30 +42,37 @@
                 </div>
             </div>
 
-            <nav class="nav-bar">
-                <ul class="nav-bar__nav">
-                    <li class="nav-bar__item"><a class="nav-bar__link" href="#">Trang chủ</a></li>
-                    <li class="nav-bar__item"><a class="nav-bar__link" href="#">Hành tinh Đất đá</a></li>
-                    <li class="nav-bar__item"><a class="nav-bar__link" href="#">Hành tinh Khí khổng lồ</a></li>
-                    <li class="nav-bar__item">
-                        <a class="nav-bar__link nav-bar__link--active" href="#">Space Store</a>
-                        <ul class="dropdown-submenu">
-                            <li><a href="#">🌍 Mô hình hành tinh</a></li>
-                            <li><a href="#">🎁 Quà lưu niệm</a></li>
-                            <li><a href="#">📚 Sách thiên văn</a></li>
-                            <li><a href="#">🔭 Kính thiên văn</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-bar__item"><a class="nav-bar__link" href="/CART/cart.html">Giỏ hàng</a></li>
-                </ul>
-            </nav>
-        </div>
+            <div class="menu">
+                <a href="#">Trang chủ</a>
+                <a href="#">Hành tinh Đất đá</a>
+                <a href="#">Hành tinh Khí khổng lồ</a>
+                <a href="#">Space Store</a>
+                <a href="/CART/cart.html">Giỏ hàng</a>
+            </div>
+
+            <button class="navbar__mobile">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
     </header>
 
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu">
+        <button class="mobile-menu__toggle"><i class="fa-solid fa-xmark"></i></button>
+        <ul class="dropdown">
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Hành tinh Đất đá</a></li>
+            <li><a href="#">Hành tinh Khí khổng lồ</a></li>
+            <li><a href="#">Space Store</a></li>
+            <li><a href="/CART/cart.html">Giỏ hàng</a></li>
+        </ul>
+    </div>
+
+    <!-- MAIN CONTENT -->
     <main>
         <!-- HERO BANNER -->
         <section class="hero">
-            <div class="overlay">
+            <div class="hero-overlay">
                 <div class="hero-content">
                     <h2>KHÁM PHÁ VŨ TRỤ<br>TRONG TẦM TAY</h2>
                     <p>Bộ sưu tập thiên thạch, mô hình hành tinh và sản phẩm không gian độc đáo.</p>
@@ -73,7 +81,7 @@
             </div>
         </section>
 
-        <!-- DANH SÁCH 8 SẢN PHẨM -->
+        <!-- DANH SÁCH SẢN PHẨM -->
         <section class="products" id="products">
             <h2>TẤT CẢ SẢN PHẨM</h2>
             <div class="product-list">
@@ -242,35 +250,81 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer__main">
-            <div class="description">
-                <p class="description__logo"><span class="logo__first-half">Space</span><span class="logo__second-half">Store</span></p>
-                <p class="description__text">Website giới thiệu kiến thức về các hành tinh khí khổng lồ trong Hệ Mặt Trời</p>
+    <!-- MODAL SIGN IN -->
+    <div class="js-modal signinMenu">
+        <div class="modal-container">
+            <i id="signinClose" class="fa-solid fa-xmark"></i>
+            <div class="modal-tag">
+                <div class="modal-signin-logo">
+                    <i class="fa-solid fa-earth-asia"></i>
+                    <h2>Planet Journey</h2>
+                </div>
+                <h3>ĐĂNG NHẬP</h3>
             </div>
-            <div class="categories">
-                <p class="categories__title">Danh mục</p>
-                <ul class="categories__list">
-                    <li><a class="categories__link" href="/home-page/space-store/index.html">Trang chủ</a></li>
-                    <li><a class="categories__link" href="/GIANT-PLANETS/giant-planets.html">Các hành tinh khí khổng lồ</a></li>
-                    <li><a class="categories__link" href="/HÀNH TINH ĐẤT ĐÁ/index.html">Các hành tinh đất đá</a></li>
-                    <li><a class="categories__link" href="/Giỏ hàng/cart.html">Giỏ hàng</a></li>
-                </ul>
-            </div>
-            <div class="contact">
-                <p class="contact__title">Theo dõi</p>
-                <a class="contact__link" target="_blank" href="#"><i class="fab fa-facebook contact__link--icon"></i> Facebook</a>
-                <a class="contact__link" target="_blank" href="#"><i class="fab fa-instagram contact__link--icon"></i> Instagram</a>
-                <a class="contact__link" target="_blank" href="#"><i class="fab fa-github contact__link--icon"></i> Github</a>
+            <div class="modal-body">
+                <label class="modal-label">Email</label>
+                <input type="email" class="modal-input" placeholder="Nhập email...">
+                <label class="modal-label">Mật khẩu</label>
+                <div class="password-box">
+                    <input type="password" id="signinPassword" class="modal-input" placeholder="Nhập mật khẩu...">
+                    <i id="togglePassword" class="fa-solid fa-eye-slash"></i>
+                </div>
+                <button id="signinSubmitButton">Đăng nhập</button>
+                <div class="divider-text">Hoặc đăng nhập bằng</div>
+                <div class="social-login">
+                    <a href="#" class="social-btn facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-btn google"><i class="fa-brands fa-google"></i></a>
+                </div>
+                <div class="footer-end">
+                    Chưa có tài khoản? <a href="#" class="js-register-btn">Đăng ký ngay</a>
+                </div>
             </div>
         </div>
-        <div class="footer__copyright">
-            <p class="copyright__text">&copy; 2026 Space Store | Giant Planets Project</p>
-        </div>
-    </footer>
+    </div>
 
-    <!-- MODAL / POPUP CHI TIẾT SẢN PHẨM BẰNG THẺ ARTICLE -->
-    <div id="productModal" class="modal" onclick="closeModalOnOutsideClick(event)">
+    <!-- MODAL SIGN UP -->
+    <div class="signupMenu">
+        <div class="modal-tag">
+            <i id="signupClose" class="fa-solid fa-xmark"></i>
+            <div class="modal-signup-logo">
+                <i class="fa-solid fa-earth-asia"></i>
+                <h2>Planet Journey</h2>
+            </div>
+            <h3>ĐĂNG KÝ TÀI KHOẢN</h3>
+        </div>
+        <div class="signup-modal-body">
+            <div class="name-and-tel">
+                <div class="body-box box-name">
+                    <input type="text" class="signupInput signup-name" placeholder="Họ và tên">
+                </div>
+                <div class="body-box">
+                    <input type="tel" class="signupInput signup-phone" placeholder="Số điện thoại">
+                </div>
+            </div>
+            <div class="body-box">
+                <input type="email" class="signupInput signup-email" placeholder="Địa chỉ Email">
+            </div>
+            <div class="body-box">
+                <input type="password" id="signupPassword" class="signupInput signup-password" placeholder="Mật khẩu">
+                <i id="toggleSignupPassword" class="fa-solid fa-eye-slash"></i>
+            </div>
+            <div class="body-box">
+                <input type="password" id="signupConfirmPassword" class="signupInput signup-confirm-password" placeholder="Xác nhận mật khẩu">
+                <i id="toggleSignupConfirmPassword" class="fa-solid fa-eye-slash"></i>
+            </div>
+            <div class="register-agree">
+                <input type="checkbox" id="checkboxValue">
+                <label for="checkboxValue">Tôi đồng ý với <a href="#">Điều khoản sử dụng</a></label>
+            </div>
+            <button id="signupSubmitButton">Đăng ký</button>
+            <div class="footer-end">
+                Đã có tài khoản? <a href="#" class="js-login-btn">Đăng nhập ngay</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL CHI TIẾT SẢN PHẨM -->
+    <div id="productModal" class="modal-product" onclick="closeModalOnOutsideClick(event)">
         <article class="modal__card">
             <button type="button" class="modal__close-btn" onclick="closeModal()">&times;</button>
             <div class="modal__body">
@@ -289,12 +343,40 @@
         </article>
     </div>
 
-    <!-- TOAST THÔNG BÁO -->
+    <!-- TOAST NOTIFICATION -->
     <div id="toast-notification" class="toast">
         <i class="fas fa-circle-check"></i>
         <span id="toast-message">Đã thêm vào giỏ hàng!</span>
     </div>
 
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__main">
+            <div class="description">
+                <p class="description__logo"><span class="logo__first-half">Space</span><span class="logo__second-half">Store</span></p>
+                <p class="description__text">Website giới thiệu kiến thức về các hành tinh khí khổng lồ trong Hệ Mặt Trời</p>
+            </div>
+            <div class="categories">
+                <p class="categories__title">Danh mục</p>
+                <ul class="categories__list">
+                    <li><a class="categories__link" href="#">Trang chủ</a></li>
+                    <li><a class="categories__link" href="#">Các hành tinh khí khổng lồ</a></li>
+                    <li><a class="categories__link" href="#">Các hành tinh đất đá</a></li>
+                    <li><a class="categories__link" href="/CART/cart.html">Giỏ hàng</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <p class="contact__title">Theo dõi</p>
+                <a class="contact__link" target="_blank" href="#"><i class="fab fa-facebook contact__link--icon"></i> Facebook</a>
+                <a class="contact__link" target="_blank" href="#"><i class="fab fa-instagram contact__link--icon"></i> Instagram</a>
+                <a class="contact__link" target="_blank" href="#"><i class="fab fa-github contact__link--icon"></i> Github</a>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <p class="copyright__text">&copy; 2026 Space Store | Giant Planets Project</p>
+        </div>
+    </footer>
+    
     <script src="scripts.js"></script>
 </body>
 
