@@ -78,6 +78,26 @@ function phoneCheck(phone, phoneInput) {
 
 //====================ELEMENTS=======================
 
+
+/*===================================================
+                      OVERLAY
+===================================================*/
+
+//CLOSE ON CLICK
+
+const overlay = document.getElementById("overlay");
+
+
+overlay.addEventListener("click", () => {
+    const popUpModal = document.querySelectorAll(".open");
+    popUpModal.forEach((elm) => {
+        closeElement(elm);
+    });
+    const mobileMenu = document.querySelector(".mobile-menu");
+    mobileMenuBtn.classList.remove("pushed");
+});
+
+
 /*===================================================
                       SIGN IN
 ===================================================*/
@@ -96,7 +116,6 @@ const signinOpen = document.querySelector(".js-login");
 
 signinOpen.addEventListener("click", (evt) => {
     const popUpModal = document.querySelector(".signinMenu");
-
     openElement(popUpModal);
 })
 
@@ -216,7 +235,7 @@ if (signupOpen) {
 const signupClose = document.getElementById("signupClose");
 
 signupClose.addEventListener("click", (evt) => {
-    const popUpModal = evt.target.parentElement.parentElement.parentElement;
+    const popUpModal = evt.target.parentElement.parentElement;
     closeElement(popUpModal);
 })
 

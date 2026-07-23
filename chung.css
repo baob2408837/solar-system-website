@@ -344,11 +344,8 @@ header {
   z-index: 900;
   visibility: hidden;
   opacity: 0;
-  pointer-events: none;
   transition: all 0.2s ease-in-out;
 }
-
-
 
 
 /*=================================
@@ -365,7 +362,10 @@ header {
   transform: translate(-50%, -50%);
   width: 400px;
   max-width: calc(100% - 40px);
+  max-height: 90vh;
   z-index: 1000;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .modal.open {
@@ -383,6 +383,10 @@ header {
   animation: showModal ease 0.5s;
   color: var(--text);
   padding: 0px 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 550px;
 }
 
 @keyframes showModal {
@@ -402,6 +406,7 @@ header {
   top: 0;
   right: 0;
   padding: 14px 16px;
+  margin-left: 6px;
   border-radius: 0 20px 0 20px;
 }
 
@@ -441,6 +446,29 @@ header {
 .modal-body,
 .modal-footer {
   padding: 0 16px;
+}
+
+.modal-body {
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+.modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary), #00e5ff);
+  border-radius: 5px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+  background: #00e5ff;
 }
 
 .modal-label {
@@ -610,33 +638,31 @@ header {
 =================================*/
 
 
-.modal-register {
-  z-index: 1000;
-  visibility: hidden;
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  padding: 20px;
-  box-sizing: border-box;
-}
 
-.modal-register .modal-container {
+.signupMenu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
   width: 600px;
   max-width: calc(100% - 40px);
   background: var(--card);
   color: var(--text);
   padding: 0 20px;
-  position: relative;
   border-radius: 20px;
   border: solid 1px rgb(79, 168, 255);
   box-shadow: 0 0 12px rgba(79, 168, 255, .8);
+  overflow: hidden;
+  height: auto;
+  max-height: 90vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
 }
 
 .modal-signup-logo {
@@ -662,6 +688,27 @@ header {
   flex-direction: column;
   gap: 10px;
   padding: 0 16px;
+  scrollbar-gutter: stable;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.signup-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.signup-modal-body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+}
+
+.signup-modal-body::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--primary), #00e5ff);
+  border-radius: 5px;
+}
+
+.signup-modal-body::-webkit-scrollbar-thumb:hover {
+  background: #00e5ff;
 }
 
 .name-and-tel {
@@ -691,7 +738,7 @@ header {
   color: #333;
 }
 
-.modal-register .body-box i:first-child {
+.signupMenu .body-box i:first-child {
   position: absolute;
   left: 15px;
   top: 50%;
@@ -868,6 +915,16 @@ header {
   pointer-events: auto;
 }
 
+.success {
+  border: solid 1px rgba(79, 168, 255, .8);
+  box-shadow: 0 0 12px rgba(79, 168, 255, .8);
+}
+
+.invalid {
+  border: solid 1px red;
+  box-shadow: 0 0 12px red;
+}
+
 
 
 /*=================================
@@ -893,7 +950,7 @@ header {
 
 @media screen and (min-width: 0px) and (max-width: 800px) {
 
-  .modal-register .modal-container {
+  .signupMenu {
     width: calc(100% - 40px);
     max-width: 600px;
   }

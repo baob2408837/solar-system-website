@@ -783,16 +783,6 @@ body::before {
   transition: all 0.2s ease-in-out;
 }
 
-.success {
-  border: solid 1px rgba(79, 168, 255, .8);
-  box-shadow: 0 0 12px rgba(79, 168, 255, .8);
-}
-
-.invalid {
-  border: solid 1px red;
-  box-shadow: 0 0 12px red;
-}
-
 .button-wrapper {
   width: 100%;
   display: flex;
