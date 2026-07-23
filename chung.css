@@ -364,7 +364,6 @@ header {
   max-width: calc(100% - 40px);
   max-height: 90vh;
   z-index: 1000;
-  overflow: hidden;
   box-sizing: border-box;
 }
 
@@ -387,6 +386,7 @@ header {
   display: flex;
   flex-direction: column;
   min-height: 550px;
+  box-sizing: border-box;
 }
 
 @keyframes showModal {
