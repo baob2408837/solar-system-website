@@ -1,5 +1,5 @@
-//==================== SET UP & HELPER FUNCTIONS =======================
-
+//====================JS CHUNG=======================//
+//SET UP & HELPER FUNCTIONS
 function openElement(popUpElm) {
     const overlay = document.getElementById("overlay");
     if (overlay) overlay.classList.add("open");
@@ -56,7 +56,7 @@ function phoneCheck(phone, phoneInput) {
     }
 }
 
-//==================== OVERLAY LOGIC =======================
+//OVERLAY
 
 const overlay = document.getElementById("overlay");
 if (overlay) {
@@ -70,7 +70,7 @@ if (overlay) {
     });
 }
 
-//==================== SIGN IN LOGIC =======================
+//SIGN IN
 
 const user1 = {
     userName: "user1",
@@ -176,7 +176,7 @@ if (signupInSigninBtn) {
     });
 }
 
-//==================== SIGN UP LOGIC =======================
+//SIGN UP
 
 const signupOpen = document.querySelector(".js-signup");
 if (signupOpen) {
@@ -268,7 +268,7 @@ if (signinInSignupBtn) {
     });
 }
 
-//==================== TOGGLE PASSWORD VISIBILITY =======================
+//PASSWORD 
 
 function setupPasswordToggle(toggleElm, inputElm) {
     if (toggleElm && inputElm) {
@@ -297,7 +297,7 @@ setupPasswordToggle(togglePassword, signinPassword);
 setupPasswordToggle(toggleSignupPass, signupPassword);
 setupPasswordToggle(toggleConfirmPass, signupConfirmPassword);
 
-//==================== MOBILE MENU LOGIC =======================
+//MOBILE MENU LOGIC
 
 const mobileMenuBtn = document.querySelector(".navbar__mobile");
 if (mobileMenuBtn) {
@@ -316,8 +316,8 @@ if (mobileMenuCloseBtn) {
         if (mobileMenuBtn) mobileMenuBtn.classList.remove("pushed");
     });
 }
-
-//==================== PRODUCT MODAL LOGIC =======================
+//JS RIÊNG
+//PRODUCT MODAL
 
 function openModal(element) {
     const productCard = element.closest('.product');
@@ -366,7 +366,7 @@ function closeModalOnOutsideClick(event) {
     }
 }
 
-//==================== CART & TOAST NOTIFICATION =======================
+//NOTIFICATION
 
 function showToast(message) {
     const toast = document.getElementById('toast-notification');
