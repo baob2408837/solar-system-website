@@ -58,9 +58,6 @@ header {
   flex: 1;
   min-width: 0;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-right: 20px;
 }
 
 .top-links {
@@ -978,6 +975,11 @@ header {
 }
 
 @media screen and (min-width: 0px) and (max-width: 800px) {
+
+  .top-bar p {
+    opacity: 0;
+    visibility: hidden;
+  }
 
   .signupMenu {
     width: calc(100% - 40px);
