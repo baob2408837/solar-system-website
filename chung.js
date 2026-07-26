@@ -181,6 +181,8 @@ signinButton.addEventListener("click", (evt) => {
         const topBarLogin = document.querySelector(".top-bar__login");
         const greetingLogin = document.createElement("p");
 
+        alert("Đăng nhập thành công!");
+
         greetingLogin.textContent = `Chào ${user1.userName}`;
         topBarLogin.replaceChildren(greetingLogin);
 

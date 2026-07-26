@@ -3,12 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 /*================================
                HEADER
 ================================*/
-
-
 /*header {
   display: grid;
   grid-template-rows: auto 1fr;
@@ -197,9 +194,9 @@
 
 .navbar__mobile.pushed.pushed {
   transform: rotate(-90deg) scale(0.8);
-} */
+}*/
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background: linear-gradient(180deg, #020611 0%, #071423 50%, #091f36 100%);
     color: #fff;
     line-height: 1.8;
@@ -235,7 +232,6 @@ ul {
     --border: rgba(255, 255, 255, .08);
     --shadow: 0 20px 45px rgba(0, 0, 0, .35);
 }
-
 /* ===================================================
    COMMON SECTIONS
 =================================================== */
@@ -289,14 +285,14 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url("images/hinhnen.jpg") center center/cover no-repeat;
+    background: url("images/hero-bg.jpg") center center/cover no-repeat;
     overflow: hidden;
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, rgba(4, 10, 22, .95) 10%, rgba(4, 10, 22, .75) 35%, rgba(4, 10, 22, .45) 60%, rgba(4, 10, 22, .15) 100%);
+    background: linear-gradient(90deg, rgba(4,10,22,.95) 10%, rgba(4,10,22,.75) 35%, rgba(4,10,22,.45) 60%, rgba(4,10,22,.15) 100%);
 }
 
 .hero-container {
@@ -334,7 +330,7 @@ section {
     margin-bottom: 45px;
 }
 
-/* Định dạng hover nút khám phá bằng CSS thuần */
+/* Định dạng hover nút khám phá bằng CSS thuần của bạn */
 .hero-btn {
     display: inline-block;
     padding: 18px 42px;
@@ -387,7 +383,7 @@ section {
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 15px rgba(79, 168, 255, 0.4);
-
+    
     /* Hiệu ứng ẩn hiện mượt mà bằng CSS transition */
     opacity: 0;
     visibility: hidden;
@@ -424,8 +420,8 @@ section {
 }
 
 .quick-card {
-    background: rgba(255, 255, 255, .05);
-    border: 1px solid rgba(255, 255, 255, .08);
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
     backdrop-filter: blur(12px);
     border-radius: 22px;
     padding: 35px 25px;
@@ -436,7 +432,7 @@ section {
 .quick-card:hover {
     transform: translateY(-10px);
     border-color: var(--primary);
-    box-shadow: 0 20px 35px rgba(79, 168, 255, .18);
+    box-shadow: 0 20px 35px rgba(79,168,255,.18);
 }
 
 .quick-card img {
@@ -546,10 +542,9 @@ section {
     transform: translateX(-50%);
     width: 70%;
     height: 1px;
-    background: linear-gradient(to right, transparent, rgba(255, 255, 255, .15), transparent);
+    background: linear-gradient(to right, transparent, rgba(255,255,255,.15), transparent);
 }
-
-.planet-section {
+.planet-section{
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -560,11 +555,10 @@ section {
     transition: opacity .8s ease, transform .8s ease;
 }
 
-.planet-section.show {
+.planet-section.show{
     opacity: 1;
     transform: translateY(0);
 }
-
 .planet-container {
     width: 90%;
     max-width: 1200px;
@@ -616,6 +610,32 @@ section {
     font-weight: 600;
 }
 
+.planet-text-stats {
+    margin-top: 45px;
+    display: flex;
+    gap: 60px;
+}
+
+.text-stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.text-stat-item .stat-value{
+    font-size:44px;
+    font-weight:700;
+    color:var(--primary);
+    line-height:1.2;
+    margin-bottom:8px;
+    white-space: nowrap;
+}
+
+.text-stat-item .stat-label {
+    font-size: 16px;
+    color: var(--gray);
+    font-weight: 400;
+}
+
 .planet-image {
     flex: 1;
     display: flex;
@@ -627,7 +647,7 @@ section {
     max-width: 480px;
     animation: spinPlanet 40s linear infinite;
     transform-origin: center;
-    filter: drop-shadow(0 0 25px rgba(79, 168, 255, .35));
+    filter: drop-shadow(0 0 25px rgba(79,168,255,.35));
     transition: .5s ease;
 }
 
@@ -637,30 +657,14 @@ section {
 }
 
 @keyframes spinPlanet {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
-#saothuy {
-    background: linear-gradient(to right, rgba(182, 122, 56, .12), transparent);
-}
-
-#saokim {
-    background: linear-gradient(to left, rgba(232, 203, 137, .10), transparent);
-}
-
-#traidat {
-    background: linear-gradient(to right, rgba(123, 230, 255, .10), transparent);
-}
-
-#saohoa {
-    background: linear-gradient(to left, rgba(45, 110, 255, .12), transparent);
-}
+#jupiter { background: linear-gradient(to right, rgba(182,122,56,.12), transparent); }
+#saturn { background: linear-gradient(to left, rgba(232,203,137,.10), transparent); }
+#uranus { background: linear-gradient(to right, rgba(123,230,255,.10), transparent); }
+#neptune { background: linear-gradient(to left, rgba(45,110,255,.12), transparent); }
 
 /* ===================================================
    TIMELINE
@@ -687,7 +691,7 @@ section {
     left: 8%;
     width: 84%;
     height: 3px;
-    background: rgba(79, 168, 255, .25);
+    background: rgba(79,168,255,.25);
     z-index: 0;
 }
 
@@ -737,7 +741,7 @@ section {
 .comparison-table td {
     padding: 20px;
     text-align: center;
-    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
 .comparison-table tbody tr {
@@ -770,8 +774,8 @@ section {
 }
 
 .fact-card {
-    background: rgba(255, 255, 255, .05);
-    border: 1px solid rgba(255, 255, 255, .08);
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
     backdrop-filter: blur(12px);
     border-radius: 20px;
     padding: 40px 30px;
@@ -782,7 +786,7 @@ section {
 .fact-card:hover {
     transform: translateY(-10px);
     border-color: var(--primary);
-    box-shadow: 0 20px 35px rgba(79, 168, 255, .18);
+    box-shadow: 0 20px 35px rgba(79,168,255,.18);
 }
 
 .fact-card i {
@@ -833,7 +837,7 @@ section {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, .45));
+    background: linear-gradient(transparent, rgba(0,0,0,.45));
 }
 
 .gallery-caption {
@@ -851,12 +855,10 @@ section {
     color: #ddd;
 }
 
-
-/* FOOTER */
-footer {
+.footer {
     margin-top: 100px;
     background: #050d18;
-    border-top: 1px solid rgba(255, 255, 255, .08);
+    border-top: 1px solid rgba(255,255,255,.08);
 }
 
 .footer-container {
@@ -901,7 +903,7 @@ footer {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, .08);
+    border-top: 1px solid rgba(255,255,255,.08);
     padding: 25px;
     text-align: center;
     color: #9faec2;
@@ -910,35 +912,17 @@ footer {
 /* ===================================================
    SCROLLBAR & SELECTION
 =================================================== */
-::-webkit-scrollbar {
-    width: 10px;
-}
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #071423; }
+::-webkit-scrollbar-thumb { background: #2f82ff; border-radius: 20px; }
+::-webkit-scrollbar-thumb:hover { background: #61bcff; }
+::selection { background: #4fa8ff; color: white; }
 
-::-webkit-scrollbar-track {
-    background: #071423;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #2f82ff;
-    border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #61bcff;
-}
-
-::selection {
-    background: #4fa8ff;
-    color: white;
-}
-
-/* ===================================================
-   RESPONSIVE LAYOUT SYSTEM (Đã sửa lỗi dư dấu đóng ngoặc ở cuối)
-=================================================== */
+/* ==========================
+   RESPONSIVE LAYOUT SYSTEM |
+============================= */
 @media(max-width: 1200px) {
-    .overview-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    .overview-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media(max-width: 992px) {
@@ -947,91 +931,29 @@ footer {
         flex-direction: column-reverse;
         text-align: center;
     }
-
     .hero-content {
         max-width: 100%;
         margin: 0 auto;
     }
-
-    .hero h1 {
-        font-size: 48px;
-    }
-
-    .hero-stats {
-        justify-content: center;
-    }
-
-    .planet-container {
-        flex-direction: column !important;
-    }
-
-    .quick-nav-grid,
-    .timeline-container,
-    .facts-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .gallery-grid,
-    .footer-container {
-        grid-template-columns: 1fr;
-    }
+    .hero h1 { font-size: 48px; }
+    .hero-stats { justify-content: center; }
+    .planet-container { flex-direction: column !important; }
+    .quick-nav-grid, .timeline-container, .facts-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-grid, .footer-container { grid-template-columns: 1fr; }
 }
 
 @media(max-width: 768px) {
-    section {
-        padding: 90px 0;
-    }
-
-    .hero h1 {
-        font-size: 38px;
-    }
-
-    .hero-stats {
-        gap: 30px;
-    }
-
-    .hero-description {
-        font-size: 17px;
-    }
-
-    .section-title h2 {
-        font-size: 36px;
-    }
-
-    .planet-content h2 {
-        font-size: 38px;
-    }
-
-    .planet-text-stats {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .overview-grid,
-    .quick-nav-grid,
-    .timeline-container,
-    .facts-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .timeline-container::before {
-        display: none;
-    }
-
-    .comparison-table {
-        display: block;
-        overflow-x: auto;
-    }
-
-    .cta {
-        padding: 45px 25px;
-    }
-
-    .cta h2 {
-        font-size: 34px;
-    }
-
-    .footer {
-        text-align: center;
-    }
+    section { padding: 90px 0; }
+    .hero h1 { font-size: 38px; }
+    .hero-stats { gap: 30px; }
+    .hero-description { font-size: 17px; }
+    .section-title h2 { font-size: 36px; }
+    .planet-content h2 { font-size: 38px; }
+    .planet-text-stats { flex-direction: column; gap: 30px; }
+    .overview-grid, .quick-nav-grid, .timeline-container, .facts-grid { grid-template-columns: 1fr; }
+    .timeline-container::before { display: none; }
+    .comparison-table { display: block; overflow-x: auto; }
+    .cta { padding: 45px 25px; }
+    .cta h2 { font-size: 34px; }
+    .footer { text-align: center; }
 }

@@ -220,6 +220,16 @@ input:focus {
     padding:50px 60px;
 }
 
+
+.categories .htdd {
+    text-decoration: none;
+}
+
+.categories .htdd h3,
+.categories .htdd p {
+    color: initial;
+}
+
 .card{
     height: 100%;
     background:#fff;
@@ -227,7 +237,8 @@ input:focus {
     padding:40px 20px;
     border-radius:20px;
     box-shadow: var(--shadow);
-    border: solid 2px transparent;
+    border: solid 2px transparent
+    color: #1b4cff;
 }
 
 .card:hover {
@@ -238,6 +249,11 @@ input:focus {
     font-size:55px;
     color:#1b4cff;
     margin-bottom:20px;
+}
+
+.card h3,
+.card p{
+    color: var(--card);
 }
 
 /* ===== PRODUCTS ===== */
@@ -273,6 +289,10 @@ input:focus {
     width:100%;
     height:260px;
     object-fit:cover;
+}
+
+.product img:hover{
+    transform: scale(1.05);
 }
 
 .product h3,
@@ -428,13 +448,4 @@ input:focus {
     .logo span{
         font-size:12px;
     }
-}
-
-.categories .htdd {
-    text-decoration: none;
-}
-
-.categories .htdd h3,
-.categories .htdd p {
-    color: initial;
 }

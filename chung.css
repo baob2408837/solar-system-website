@@ -1,4 +1,24 @@
 /*================================
+               SETUP
+================================*/
+
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+
+/*================================
                HEADER
 ================================*/
 
@@ -423,14 +443,14 @@ header {
   font-size: 46px;
 }
 
-.modal-tag {
+.signinMenu .modal-tag {
   display: block;
   text-align: center;
   justify-content: center;
-  padding: 30px 16px 10px;
+  padding: 30px 16px 10px 0;
 }
 
-.modal-tag h3 {
+.signinMenu .modal-tag h3 {
   padding: 0;
   margin: 0;
 }
@@ -663,13 +683,24 @@ header {
   transform: translate(-50%, -50%) scale(1);
 }
 
+.signupMenu .modal-tag {
+  display: block;
+  text-align: center;
+  justify-content: center;
+  padding: 30px 16px 20px 10px;
+}
+
+.signupMenu .modal-tag h3 {
+  padding: 10px
+}
+
 .modal-signup-logo {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   color: var(--primary);
-  gap: 8px;
+  gap: 3px;
 }
 
 .modal-signup-logo .fa-earth-asia {
