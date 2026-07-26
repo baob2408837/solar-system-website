@@ -1,4 +1,4 @@
-//==================== PRODUCT MODAL LOGIC =======================
+
 
 function openModal(element) {
     const productCard = element.closest('.product');
@@ -47,7 +47,7 @@ function closeModalOnOutsideClick(event) {
     }
 }
 
-//==================== CART & TOAST NOTIFICATION =======================
+//NOTIFICATION
 
 function showToast(message) {
     const toast = document.getElementById('toast-notification');
