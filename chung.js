@@ -364,8 +364,9 @@ mobileMenuBtn.addEventListener("click", () => {
 
 const mobileMenuCloseBtn = document.querySelector(".mobile-menu__toggle");
 
+
 mobileMenuCloseBtn.addEventListener("click", () => {
     const mobileMenu = document.querySelector(".mobile-menu");
     closeElement(mobileMenu);
     mobileMenuBtn.classList.remove("pushed");
-})
+});

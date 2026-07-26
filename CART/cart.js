@@ -217,15 +217,17 @@ inputElement.forEach(input => {
                     input.classList.remove("success");
                 }
             }
-        })
+        });
     }
-})
+});
 
 emailElement.addEventListener("blur", () => {
     if (validateEmail(emailElement.value.trim())) {
         correctElement(emailElement);
     } else if (emailElement.value.trim() !== "" && !validateEmail(emailElement.value.trim())) {
-        uncorrectElement(emailElement);
+        incorrectElement(emailElement);
+        emailElement.value = "";
+        emailElement.placeholder = "Email không hợp lệ!";
     } else if (emailElement.value.trim() === "") {
         if (emailElement.classList.contains("success")) {
             emailElement.classList.remove("success");
@@ -241,7 +243,9 @@ phoneElement.addEventListener("blur", () => {
     if (validatePhone(phoneElement.value.trim())) {
         correctElement(phoneElement);
     } else if (phoneElement.value.trim() !== "" && !validatePhone(phoneElement.value.trim())) {
-        uncorrectElement(phoneElement);
+        incorrectElement(phoneElement);
+        phoneElement.value = "";
+        phoneElement.placeholder = "Số điện thoại không hợp lệ!";
     } else if (phoneElement.value.trim() === "") {
         if (phoneElement.classList.contains("success")) {
             phoneElement.classList.remove("success");
@@ -262,10 +266,8 @@ checkoutSubmit.addEventListener("click", () => {
     inputElement.forEach(input => {
         if (!input.classList.contains("success")) {
             allValid = false;
-            uncorrectElement(input);
-            if (input !== phoneElement && input !== emailElement) {
-                input.placeholder = "Không được để trống"
-            }
+            incorrectElement(input);
+            input.placeholder = "Không được để trống!";
         }
     })
     if (allValid) {
@@ -273,6 +275,7 @@ checkoutSubmit.addEventListener("click", () => {
         closeElement(checkoutMenu);
         checkoutOpen.innerText = "Đã đặt hàng thành công";
         checkoutOpen.classList.add("activated");
+        localStorage.removeItem("cartItems");
     }
 })
 
