@@ -2,6 +2,13 @@
                SETUP
 ================================*/
 
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
 
 a {
   text-decoration: none;
@@ -15,6 +22,12 @@ ul {
 
 input:focus {
   outline: none;
+}
+
+:root {
+    --fs-large: 32px;
+    --fs-medium: 24px;
+    --fs-normal: 16px;
 }
 
 
@@ -150,6 +163,7 @@ header {
   justify-content: flex-end;
   gap: clamp(15px, 2vw, 40px);
   padding: 0;
+  margin-right: 20px;
   align-items: center;
   width: auto;
   max-width: none;
@@ -628,7 +642,7 @@ header {
 
 .footer-end a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: #00e5ff;
   padding-left: 2px;
   transition: color 0.2s ease-in-out;
 }

@@ -1,0 +1,412 @@
+:root {
+    --text: #ffffff;
+    --primary: #3b82f6;
+    --secondary: #07152e;
+    --gray: #94a3b8;
+    --border: #1e293b;
+    --card: #0b1329;
+    --fs-normal: 14px;
+}
+
+@media screen and (min-width: 500px) {
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--secondary);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, var(--primary), #00e5ff);
+        border-radius: 5px;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #334155;
+}
+
+.welcome__cart {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cart-count {
+    background-color: #ef4444;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 10px;
+    line-height: 1;
+}
+
+/* HERO BANNER */
+.hero {
+    height: 500px;
+    background: url('/Home-Page/images/banner1.jpg') center/cover;
+    position: relative;
+    transition: .5s;
+    z-index: 100;
+}
+
+.hero:hover {
+    background: url('/Home-Page/images/banner2.jpg') center/cover;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.45);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    color: #fff;
+    margin-right: 80px;
+    margin-left: 80px;
+    max-width: 650px;
+}
+
+.hero-content h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    background: #1b4cff;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #1238ca;
+}
+
+/* DANH SÁCH SẢN PHẨM */
+.products {
+    padding: 60px 4%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.products h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 40px;
+}
+
+.product-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.product {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    min-width: 22%;
+    max-width: calc(25% - 22.5px);
+    margin-bottom: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.product__id {
+    display: none;
+}
+
+.product__img-box {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.product__img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.product__img-box img:hover {
+    transform: scale(1.05);
+}
+
+.product__btn-detail {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    background-color: rgba(15, 23, 42, 0.65);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 13px;
+    opacity: 0.8;
+    transition: all 0.2s ease-in-out;
+    z-index: 2;
+}
+
+.product:hover .product__btn-detail {
+    opacity: 1;
+}
+
+.product__btn-detail:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.15);
+}
+
+.product h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 8px 0;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.product__price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1d4ed8;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.product__buttons {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.product__btn-buy {
+    flex: 1.2;
+    background-color: #1d4ed8;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+
+.product__btn-buy:hover {
+    background-color: #1e40af;
+}
+
+.product__btn-cart {
+    flex: 1;
+    background-color: #f1f5f9;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.product__btn-cart:hover {
+    background-color: #e2e8f0;
+    color: #0f172a;
+}
+
+
+/* POPUP MODAL CHI TIẾT SẢN PHẨM */
+.modal-product {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.modal-product.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal__card {
+    position: relative;
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 680px;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+    transform: scale(0.85);
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal-product.is-active .modal__card {
+    transform: scale(1);
+}
+
+.modal__close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+}
+
+.modal__body {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.modal__img-box {
+    flex: 1;
+    max-width: 250px;
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+.modal__img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal__info {
+    flex: 1.5;
+}
+
+.modal__info h2 {
+    font-size: 22px;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.modal__price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d4ed8;
+    margin-bottom: 20px;
+}
+
+/* TOAST NOTIFICATION */
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #0f172a;
+    color: #ffffff;
+    padding: 14px 24px;
+    border-radius: 8px;
+    border-left: 4px solid #1d4ed8;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+
+/*=================================
+            RESPONSIVE
+=================================*/
+
+
+@media screen and (max-width: 885px) {
+
+    .product {
+        min-width: 45%;
+        max-width: calc(50% - 15px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hero-content {
+        margin-left: 20px;
+        max-width: 90%;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .product {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
